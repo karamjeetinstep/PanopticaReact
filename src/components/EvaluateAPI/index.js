@@ -1,12 +1,12 @@
 import React from "react";
-import Stepper from "../common/Stepper/stepper";
+import Stepper from "../../common/Stepper/stepper";
 import "./index.scss";
 import { useSelector ,useDispatch} from "react-redux";
 import { steps } from "../../data";
 import RightModal from "./rightModal";
-import SubHeader from '../common/SubHeader';
+import SubHeader from '../../common/SubHeader';
 import { handleSideModal } from "../../redux/reducer/modal";
-import Footer from '../common/Footer'
+import Footer from '../../common/Footer'
 const EvaluateAPI = (props) => {
   const isSidePopUpOpen = useSelector(
     (state) => state.modalsData.isSidePopUpOpen

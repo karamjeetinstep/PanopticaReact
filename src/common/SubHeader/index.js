@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.css";
-import subHeaderLogo from "../../../assets/images/subHeaderLogo.png";
-import fileIcon from "../../../assets/images/fileIcon.png";
+import subHeaderLogo from "../../assets/images/subHeaderLogo.png";
+import fileIcon from "../../assets/images/fileIcon.png";
 import { useDispatch,useSelector } from "react-redux";
-import {handleSideModal} from '../../../redux/reducer/modal';
+import {handleSideModal} from '../../redux/reducer/modal';
 import { useNavigate } from "react-router-dom";
 import Button from "../Button";
 const SubHeader = ({showFileIcon}) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
-import SubHeader from "../common/SubHeader";
-import Button from "../common/Button";
+import SubHeader from "../../common/SubHeader";
+import Button from "../../common/Button";
 import { useNavigate } from "react-router-dom";
 const Congratulation = (props) => {
   const navigate = useNavigate();
