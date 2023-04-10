@@ -4,7 +4,7 @@ import "./index.scss";
 const Finish = (props) => {
 
   return (  
-      <div className="Finish">
+      <div className="finish">
       Finish
       </div>   
   );
