@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  padding-left: 2%;
+  align-items: center;
+  height: 60px;
+  background: #ffffff;
+}
+
+.headerTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13px;
+}
+.headerText1 {
+  font-size: 18px;
+  line-height: 25px;
+  align-items: center;
+  color: #133774;
+}
+.headerText2 {
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  color: #133774;
+}
+.headerLogo {
+  width: 34px;
+  height: 34px;
+}
