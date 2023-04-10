@@ -1,0 +1,45 @@
+.Congratulation{
+    padding: 2%;
+    .heading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nextModuleDetail{
+        height: 205px;
+        display: flex;
+        background: #FFFFFF;
+        border: 1px solid #D2D2D6;
+        border-radius: 12px;
+        padding: 3%;
+        .defination{
+            width: 60%;
+            border-right: 1px solid #D5D5E0;
+        }
+        .whatYouGet{
+            padding-left: 3%;
+        }
+    }
+    .expolreUseCase{
+        .cardsHeading{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2%;
+            .viewAllModules{
+                color: #007AA3; 
+                text-decoration: none;
+            }
+        }
+        .cards{
+            .card{
+                width: 395.67px;
+                height: 270px;               
+                background: #FFFFFF;
+                border: 1px solid #D2D2D6;
+                border-radius: 12px;
+            }
+        }
+    }
+}

@@ -5,7 +5,7 @@ import { useSelector ,useDispatch} from "react-redux";
 import { steps } from "../../data";
 import RightModal from "./rightModal";
 import SubHeader from '../common/SubHeader';
-import { handleSideModal } from "../../redux/reducer";
+import { handleSideModal } from "../../redux/reducer/modal";
 import Footer from '../common/Footer'
 const EvaluateAPI = (props) => {
   const isSidePopUpOpen = useSelector(

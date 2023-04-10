@@ -15,31 +15,12 @@
   line-height: 33px;
   color: #292a31;
 }
-.subHeaderLogo {
-}
+
 .subHederSecond {
-  /* margin-left: 44%; */
+  width: 50%;
   display: flex;
 }
-.exitButton {
-  width: 155px;
-  cursor: pointer;
-  height: 38px;
-  background: #ffffff;
-  border: 2px solid #007aa3;
-  border-radius: 30px;
-  color: #007aa3;
-}
-.signUpButton {
-  cursor: pointer;
-  color: #f7f7f7;
-  width: 89px;
-  margin: 0 10% 0 10%;
-  height: 38px;
-  border: none;
-  background: #007aa3;
-  border-radius: 30px;
-}
+
 .helpButton {
   cursor: pointer;
   border: none;
