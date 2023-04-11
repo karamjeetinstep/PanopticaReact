@@ -11,7 +11,7 @@ const Footer = (props) => {
 
   const preClick = () => {
     if (currentStep === 1) {
-      navigate("/securityAcademy");
+      navigate("/security-academy");
     } else {
       dispatch(setCurrentStep(currentStep - 1));
     }

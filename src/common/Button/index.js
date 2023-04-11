@@ -5,15 +5,16 @@ const Button = (props) => {
     <button
       style={{
         padding: props.padding,
-        color: props.color,
+        color:props.disabled?"#B2B2B2":props.color,
         margin: props.margin,
         height: props.height,
         border:props.border,
-        background: props.background,
+        background:props.disabled?"#DEDEDE": props.background,
         borderRadius: props.borderRadius,
-        cursor:props.cursor,
+        cursor:props.disabled?"unset":props.cursor,
         width:props.width,
       }}
+      disabled={props.disabled}
       onClick={()=>{props.onClick()}}
       className={props.className}
     >
@@ -32,6 +33,7 @@ Button.defaultProps = {
   borderRadius:"30px",
   cursor: 'pointer',
   width:"fit-content",
-  onClick:()=>{console.log("send your onClick function in button props")}
+  onClick:()=>{console.log("send your onClick function in button props")},
+  disabled:false
 };
 export default Button;

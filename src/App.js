@@ -17,9 +17,9 @@ const App = () => {
           <Header subHeaderShow={true} />
           <Routes>
             <Route exact path="/" element={<SampleHome />} />
-            <Route path="/securityAcademy" element={<SecurityAcademy />} />
-            <Route path="/instantPOV" element={<InstantPOV />} />
-            <Route path="/evaluateAPI" element={<EvaluateAPI />} />
+            <Route path="/security-academy" element={<SecurityAcademy />} />
+            <Route path="/instant-pov" element={<InstantPOV />} />
+            <Route path="/evaluate-api" element={<EvaluateAPI />} />
             <Route path="/congratulation" element={<Congratulation />} />
           </Routes>
         </BrowserRouter>
