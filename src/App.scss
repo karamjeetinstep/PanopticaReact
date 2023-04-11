@@ -30,6 +30,66 @@
   margin: 0;
   padding: 0;
 }
+//header css started
+.header {
+  max-width: 1580px;
+  margin: 0 auto;
+  display: flex;
+  padding-left: 2%;
+  align-items: center;
+  height: 60px;
+  background: #ffffff;
+  .headerTitle {
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+    .headerText1 {
+      font-size: 18px;
+      line-height: 25px;
+      align-items: center;
+      color: #133774;
+    }
+    .headerText2 {
+      font-size: 12px;
+      line-height: 16px;
+      align-items: center;
+      color: #133774;
+    }
+  }
+  .headerLogo {
+    width: 34px;
+    height: 34px;
+  }
+}
+//header css ended
+
+//Subheader css started
+.subHeader {
+  display: flex;
+  padding-left: 3%;
+  height: 62px;
+  align-items: center;
+  background: #f9f9fa;
+  .subHeaderFirst {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #292a31;
+  }
+  .subHederSecond {
+    width: 50%;
+    display: flex;
+    .helpButton {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+  }
+}
+//Subheader css ended
+
 // Academy Css Started
 .container_One {
   max-width: 1580px;
@@ -51,6 +111,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
     justify-content: flex-start;
   }
   .mein_heading {
@@ -173,7 +234,13 @@
   .last_box {
     margin-bottom: 32px;
   }
-
+   .selectedModule{
+    border: 2px solid #007AA3 !important;
+    color: #007AA3 !important;
+    img{
+      filter: opacity(0.5) drop-shadow(0 0 0 #007AA3);
+    }
+   }
   .industry_box {
     width: 160px;
     height: 79px;
@@ -181,13 +248,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 14px 20px;
     gap: 5px;
     box-sizing: border-box;
     background: #fff;
     cursor: pointer;
-    /* Grey/30 */
-
+    color: rgba(18, 18, 63, 0.87);
     border: 1px solid #d2d2d6;
     border-radius: 10px;
     img {
@@ -200,15 +265,9 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 22px;
-      /* identical to box height, or 157% */
-
       display: flex;
       align-items: center;
       text-align: center;
-
-      /* Text + Icon/primary */
-
-      color: rgba(18, 18, 63, 0.87);
     }
   }
 
@@ -230,9 +289,57 @@
     gap: 20px;
   }
 }
-
 // Academy Css End
 
+
+
+
+
+//stepper css started
+.slider-wrapper{
+  margin-top: 3%;
+  width: 90%;
+  margin-left: 30px;
+  .slider-steps {
+    top:40px;
+    display: flex;
+    justify-content: space-between;
+    margin: -21px 96px 0 8%;
+    .points{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position:relative;
+      .title{
+        position: absolute;
+        bottom: -80%;
+        width: max-content;
+    }
+    }
+  }
+  .slider-step {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    &.completed {
+      background-color: #4caf50;
+      color: #fff;
+    }
+    &.inprogress {
+      background-color: #5494FF;
+      color: #fff;
+    }
+  }
+}
+// stepper css ended
 // Gobals Css
 .container {
   max-width: 1580px;
@@ -370,3 +477,31 @@
 
   color: #5a5b6a;
 }
+//footer css started
+.footer {
+  display: flex;
+  padding: 1% 3%;
+  align-items: center;
+  background:  #0D274D;
+  justify-content: flex-end;
+  .backButton {
+    height: 38px;
+    cursor: pointer;
+    background: #0D274D;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    color:white;
+    padding:0 3%;
+  }
+  .nextButton {
+    padding:0 3%;
+    cursor: pointer;
+    color: #f7f7f7;
+    margin-left: 1%;
+    height: 38px;
+    border: none;
+    background: #007aa3;
+    border-radius: 30px;
+  }
+}
+//footer css ended

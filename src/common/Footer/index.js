@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentStep } from "../../redux/reducer/modal";
 import { useNavigate } from "react-router-dom";
@@ -11,7 +10,7 @@ const Footer = (props) => {
 
   const preClick = () => {
     if (currentStep === 1) {
-      navigate("/securityAcademy");
+      navigate("/security-academy");
     } else {
       dispatch(setCurrentStep(currentStep - 1));
     }

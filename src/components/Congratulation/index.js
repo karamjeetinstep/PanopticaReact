@@ -37,7 +37,7 @@ const Congratulation = (props) => {
               </p>
               <Button
                 onClick={() => {
-                  navigate("/evaluateAPI");
+                  navigate("/evaluate-api");
                 }}
                 text="Start Module"
               />
@@ -56,7 +56,7 @@ const Congratulation = (props) => {
         <div className="expolreUseCase">
           <div className="cardsHeading">
             <h3>Lets explore some more use cases below...</h3>
-            <a className="viewAllModules" href="/instantPOV">
+            <a className="viewAllModules" href="/instant-pov">
               View All Modules
             </a>
           </div>

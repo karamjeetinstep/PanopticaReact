@@ -11,7 +11,7 @@ const InstantPOV = (props) => {
     <div className="instantPOV">
       <div className="heading">
         <div className="text">
-        <button className="backButton" onClick={()=>{navigate('/securityAcademy')}}>
+        <button className="backButton" onClick={()=>{navigate('/security-academy')}}>
               <img alt="" src={backArrow}></img>
               <span className="backbuttontext">Back to Modules</span>
             </button>
