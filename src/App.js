@@ -1,13 +1,13 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./common/Header";
 import InstantPOV from "./components/InstantPOV";
 import EvaluateAPI from "./components/EvaluateAPI";
 import SecurityAcademy from "./components/SecurityAcademy";
 import Congratulation from "./components/Congratulation";
-import { store } from './redux/store.js'
-import { Provider } from 'react-redux';
+import { store } from "./redux/store.js";
+import { Provider } from "react-redux";
 const SampleHome = () => <h1>Home</h1>;
 const App = () => {
   return (
