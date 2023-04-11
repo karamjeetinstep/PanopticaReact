@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentStep } from "../../redux/reducer/modal";
 import { useNavigate } from "react-router-dom";

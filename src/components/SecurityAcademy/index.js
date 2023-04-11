@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import "./index.scss";
 import { moduleCards,evaluateAPIList,accordian } from "../../data";
 import Button from "../../common/Button";
 import { BsArrowLeft } from "react-icons/bs";
 import EvaluteImg from "../../assets/images/Frame 1000005980.svg";
 import Accordion from "./Accordion";
-import Media from "../../assets/images/imges.svg";
 import { useNavigate } from "react-router-dom";
 const SecurityAcademy = (props) => {
   const navigate = useNavigate();
@@ -67,9 +65,9 @@ const SecurityAcademy = (props) => {
                   onClick={() => {
                     setIsModuleSelected(item.id);
                   }}
-                  className="industry_box"
+                  className={`industry_box ${isModuleSelected===item.id&&'selectedModule'}`}
                 >
-                  <img src={item.img} alt="" />
+                  <img src={item.img} alt=""/>
                   <p>{item.name}</p>
                 </button>
               ))}

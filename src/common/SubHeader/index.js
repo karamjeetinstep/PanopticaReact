@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import subHeaderLogo from "../../assets/images/subHeaderLogo.png";
 import fileIcon from "../../assets/images/fileIcon.png";
 import { useDispatch,useSelector } from "react-redux";

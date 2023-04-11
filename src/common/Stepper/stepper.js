@@ -1,7 +1,6 @@
 import React from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
-import './stepper.css';
 import { useDispatch,useSelector } from "react-redux";
 import {setCurrentStep} from '../../redux/reducer/modal'
 function Stepper({ steps }) {
