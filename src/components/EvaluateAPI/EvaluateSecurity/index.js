@@ -4,7 +4,7 @@ import "./index.scss";
 const EvaluateSecurity = (props) => {
 
   return (  
-      <div className="EvaluateSecurity">
+      <div className="evaluateSecurity">
       EvaluateSecurity
       </div>   
   );

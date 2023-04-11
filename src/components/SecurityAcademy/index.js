@@ -42,7 +42,7 @@ const SecurityAcademy = (props) => {
             }
           </div>
         </div>
-        <div className="footer">
+        <div className="footer1">
           <button onClick={()=>{navigate('/instantPOV')}} className="seeMore">See other modules</button>
           <button onClick={()=>{navigate('/evaluateAPI')}} className="startModule">Start Module</button>
         </div>

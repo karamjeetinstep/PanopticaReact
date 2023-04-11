@@ -4,7 +4,7 @@ import "./index.scss";
 const UploadAPI = (props) => {
 
   return (  
-      <div className="UploadAPI">
+      <div className="uploadAPI">
       UploadAPI
       </div>   
   );

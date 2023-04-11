@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Header from "./components/common/Header";
+import Header from "./common/Header";
 import InstantPOV from "./components/InstantPOV";
 import EvaluateAPI from "./components/EvaluateAPI";
 import SecurityAcademy from "./components/SecurityAcademy";

@@ -4,7 +4,7 @@ import "./index.scss";
 const ChooseAPI = (props) => {
 
   return (  
-      <div className="ChooseAPI">
+      <div className="chooseAPI">
       ChooseAPI
       </div>   
   );
