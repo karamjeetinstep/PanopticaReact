@@ -95,7 +95,7 @@
 .container_One {
   max-width: 1580px;
   margin: 0px auto;
-  padding: 27px 0px;
+  padding: 27px 0px 0 92px;
   padding-bottom: 15px;
 
   span.d-flex-center-flex-start {
@@ -363,7 +363,7 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.0025em;
-    color: #9696a0;
+    // color: #9696a0;
   }
   .search_icon {
     position: absolute;
@@ -457,6 +457,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
+        cursor: pointer;
         line-height: 22px;
         color: #007aa3;
         margin-top: 10px;
@@ -547,6 +548,7 @@
     border-radius: 4px;
     width: 21px;
     height: 21px;
+    cursor: pointer;
   }
   p {
     font-family: "CiscoSans";
