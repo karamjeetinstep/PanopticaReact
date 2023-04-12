@@ -125,9 +125,6 @@ export const filter = [
   },
   {
     name: "Job Role",
-    checkbox: [
-      { name: "Analyst (8)" },
-      { name: "Data Scientist (8)" },
-    ],
+    checkbox: [{ name: "Analyst (8)" }, { name: "Data Scientist (8)" }],
   },
 ];

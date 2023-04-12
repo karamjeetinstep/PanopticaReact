@@ -29,6 +29,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 //header css started
 .header {
@@ -234,13 +235,13 @@
   .last_box {
     margin-bottom: 32px;
   }
-   .selectedModule{
-    border: 2px solid #007AA3 !important;
-    color: #007AA3 !important;
-    img{
-      filter: opacity(0.5) drop-shadow(0 0 0 #007AA3) drop-shadow(0 0 0 #007AA3) ;
+  .selectedModule {
+    border: 2px solid #007aa3 !important;
+    color: #007aa3 !important;
+    img {
+      filter: opacity(0.5) drop-shadow(0 0 0 #007aa3) drop-shadow(0 0 0 #007aa3);
     }
-   }
+  }
   .industry_box {
     width: 160px;
     height: 79px;
@@ -291,30 +292,293 @@
 }
 // Academy Css End
 
+// instantPOV started
 
+.instantPOV {
+  .heading .text {
+    padding: 0 0.75rem;
+  }
+  .main {
+    padding: 24px 50px;
+    padding-right: 10px;
 
+    .accordion {
+      margin-bottom: 12px;
+      align-items: center !important;
+      padding-left: 0;
+    }
+    .d-flex-center-flex-start {
+      display: flex;
+      align-items: center;
+    }
+    .accordion__title {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: #484851;
+    }
+    .accordion__text {
+      padding: 0 !important;
+      width: 100%;
 
+      .filter_left {
+        display: flex;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .All_Modules .first_module_text {
+    font-family: "CiscoSans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+    /* identical to box height, or 127% */
+
+    /* Gray / 90 */
+    margin-bottom: 21px;
+
+    color: #292a31;
+  }
+  .input-group {
+    position: relative;
+  }
+  .All_Modules {
+    padding: 0 0.75rem;
+    width: 398px;
+    margin-bottom: 39px;
+  }
+  .All_Modules .input-group .form-input {
+    padding: 10px 14px;
+    width: 398px;
+    background: #ffffff;
+    border: 1px solid #b4b4bb;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.0025em;
+    color: #9696a0;
+  }
+  .search_icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 0;
+    background: #fff;
+    cursor: pointer;
+  }
+  .Kubernetes_box {
+    h2 {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+      padding: 0 0.75rem;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.15px;
+
+      /* Neutral/900 */
+      margin-bottom: 15px;
+      color: #484851;
+    }
+  }
+  .API_Security {
+    margin-bottom: 30px;
+    h2 {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+      padding: 0 0.75rem;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.15px;
+
+      /* Neutral/900 */
+      margin-bottom: 15px;
+      color: #484851;
+    }
+    .api_sec_box {
+      box-sizing: border-box;
+      padding: 11px 24px;
+      gap: 10px;
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #e1e1e3;
+      border-radius: 12px;
+      img {
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #3a3a44;
+        margin-bottom: 5px;
+      }
+      p {
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #5a5b6a;
+        margin-bottom: 5px;
+      }
+      span {
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #9696a0;
+        margin-bottom: 10px !important;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: 0;
+        background: none;
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #007aa3;
+        margin-top: 10px;
+      }
+      button span {
+        color: #007aa3;
+        margin-bottom: 0 !important;
+      }
+      button img {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .backButton {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    /* Cisco/Primary Blue */
+    margin-bottom: 9px;
+    color: #007aa3;
+  }
+  .heading {
+    margin-bottom: 37px;
+
+    display: flex;
+    font-family: "CiscoSans";
+    padding: 24px 50px;
+    align-items: center;
+    background: rgba(47, 47, 87, 0.05);
+    .backButton {
+      border: none;
+      background: transparent;
+      color: #007aa3;
+      display: flex;
+      cursor: pointer;
+      width: -webkit-fill-available;
+      span {
+        padding-left: 1%;
+      }
+    }
+    .title {
+      font-size: 37px;
+      line-height: 66px;
+      color: #484851;
+    }
+    .titleDetail {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      /* or 167% */
+
+      display: flex;
+      align-items: center;
+
+      /* Neutral/900 */
+
+      color: #484851;
+    }
+    .text {
+      width: 60%;
+    }
+    .securityIcon {
+      margin-left: 27%;
+      height: 106px;
+    }
+  }
+}
+
+// instantPOV ended
+// checkbox
+.filter_left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .checkbox-1 {
+    border: 2px solid #12123f99;
+    border-radius: 4px;
+    width: 21px;
+    height: 21px;
+  }
+  p {
+    font-family: "CiscoSans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #484851;
+  }
+}
+// checkbox ended
 
 //stepper css started
-.slider-wrapper{
+.slider-wrapper {
   margin-top: 3%;
   width: 90%;
   margin-left: 30px;
   .slider-steps {
-    top:40px;
+    top: 40px;
     display: flex;
     justify-content: space-between;
     margin: -21px 96px 0 8%;
-    .points{
+    .points {
       display: flex;
       flex-direction: column;
       align-items: center;
-      position:relative;
-      .title{
+      position: relative;
+      .title {
         position: absolute;
         bottom: -80%;
         width: max-content;
-    }
+      }
     }
   }
   .slider-step {
@@ -334,13 +598,26 @@
       color: #fff;
     }
     &.inprogress {
-      background-color: #5494FF;
+      background-color: #5494ff;
       color: #fff;
     }
   }
 }
 // stepper css ended
 // Gobals Css
+.ps-1 {
+  padding-left: calc(45px - 12px) !important;
+}
+.Skeleton_img {
+  width: 40px;
+  height: 40px;
+}
+.mb-1 {
+  margin-bottom: 0.625rem;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
 .container {
   max-width: 1580px;
   margin: 0 auto;
@@ -369,6 +646,10 @@
 }
 .row {
   display: flex;
+  flex-wrap: wrap;
+}
+.row-column-md-reverse {
+  flex-direction: column-reverse;
 }
 .col-md-8 {
   padding: 0px 0.75rem;
@@ -391,6 +672,23 @@
 }
 .w-80 {
   width: 80%;
+}
+.col-md-3 {
+  width: 15%;
+  padding: 0px 0.75rem;
+}
+.col-md-33 {
+  padding: 0px 0.75rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.mb-3 {
+  margin-bottom: 1.5rem;
 }
 
 // accordion section
@@ -482,19 +780,19 @@
   display: flex;
   padding: 1% 3%;
   align-items: center;
-  background:  #0D274D;
+  background: #0d274d;
   justify-content: flex-end;
   .backButton {
     height: 38px;
     cursor: pointer;
-    background: #0D274D;
-    border: 2px solid #FFFFFF;
+    background: #0d274d;
+    border: 2px solid #ffffff;
     border-radius: 30px;
-    color:white;
-    padding:0 3%;
+    color: white;
+    padding: 0 3%;
   }
   .nextButton {
-    padding:0 3%;
+    padding: 0 3%;
     cursor: pointer;
     color: #f7f7f7;
     margin-left: 1%;
@@ -505,3 +803,35 @@
   }
 }
 //footer css ended
+
+// media
+
+@media (max-width: 1147px) {
+  .col-md-33 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 46%;
+    flex: 0 0 46%;
+    max-width: 46%;
+  }
+}
+@media (max-width: 897px) {
+  .col-md-33,
+  .col-md-4,
+  .col-md-8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .instantPOV .All_Modules,
+  .instantPOV .All_Modules .input-group,
+  .instantPOV .All_Modules .input-group .form-input {
+    width: 100%;
+  }
+  .mobile_d-none {
+    display: none;
+  }
+  .instantPOV .heading .text {
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "react-loading-skeleton/dist/skeleton.css";
 import Header from "./common/Header";
 import InstantPOV from "./components/InstantPOV";
 import EvaluateAPI from "./components/EvaluateAPI";
