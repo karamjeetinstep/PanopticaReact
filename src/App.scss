@@ -238,7 +238,7 @@
     border: 2px solid #007AA3 !important;
     color: #007AA3 !important;
     img{
-      filter: opacity(0.5) drop-shadow(0 0 0 #007AA3);
+      filter: opacity(0.5) drop-shadow(0 0 0 #007AA3) drop-shadow(0 0 0 #007AA3) ;
     }
    }
   .industry_box {
