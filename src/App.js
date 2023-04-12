@@ -9,12 +9,14 @@ import SecurityAcademy from "./components/SecurityAcademy";
 import Congratulation from "./components/Congratulation";
 import { store } from "./redux/store.js";
 import { Provider } from "react-redux";
+const env ="development";
+const configBuffer= require(`./env/${env}.json`);
 const SampleHome = () => <h1>Home</h1>;
 const App = () => {
   return (
     <div className="container">
       <Provider store={store}>
-        <BrowserRouter>
+        <BrowserRouter basename={configBuffer.BASE_ROUTE} >
           <Header subHeaderShow={true} />
           <Routes>
             <Route exact path="/" element={<SampleHome />} />

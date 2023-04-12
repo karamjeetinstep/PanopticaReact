@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.scss";
 import backArrow from "../../assets/images/backArrow.png";
 import securityIcon from "../../assets/images/securityIcon.png";
 import { useNavigate } from "react-router-dom";
