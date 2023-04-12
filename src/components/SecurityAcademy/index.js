@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { moduleCards,evaluateAPIList,accordian } from "../../data";
+import { moduleCards, evaluateAPIList, accordian } from "../../data";
 import Button from "../../common/Button";
 import { BsArrowLeft } from "react-icons/bs";
 import EvaluteImg from "../../assets/images/Frame 1000005980.svg";
@@ -50,7 +50,9 @@ const SecurityAcademy = (props) => {
                 <div className="module_box border-left-1">
                   <h3>What you will get after this module?</h3>
                   <ul>
-                    {evaluateAPIList.map((item)=><li>{item}</li>)}
+                    {evaluateAPIList.map((item) => (
+                      <li>{item}</li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -65,9 +67,11 @@ const SecurityAcademy = (props) => {
                   onClick={() => {
                     setIsModuleSelected(item.id);
                   }}
-                  className={`industry_box ${isModuleSelected===item.id&&'selectedModule'}`}
+                  className={`industry_box ${
+                    isModuleSelected === item.id && "selectedModule"
+                  }`}
                 >
-                  <img src={item.img} alt=""/>
+                  <img src={item.img} alt="" />
                   <p>{item.name}</p>
                 </button>
               ))}
@@ -96,12 +100,14 @@ const SecurityAcademy = (props) => {
         <div className="col-md-4 d-flex">
           <div className="Table_Right_side border-left-1">
             <h3>Table of Contents</h3>
-            {accordian.map((item)=> <Accordion
-              subtitle={item.subTitle}
-              image={item.img}
-              title={item.title}
-              content={item.content}
-            />)}
+            {accordian.map((item) => (
+              <Accordion
+                subtitle={item.subTitle}
+                image={item.img}
+                title={item.title}
+                content={item.content}
+              />
+            ))}
           </div>
         </div>
       </div>
