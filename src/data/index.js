@@ -13,7 +13,6 @@ import TestAPI from "../components/EvaluateAPI/TestAPI";
 import UploadAPI from "../components/EvaluateAPI/UploadAPI";
 import Media from "../assets/images/imges.svg";
 
-
 export const moduleCards = [
   { id: 1, img: FinancialServices, name: "Financial Services" },
   {
@@ -61,17 +60,74 @@ export const evaluateAPIList = [
   "Evaluate Your Own API",
 ];
 export const accordian = [
-    {img:Media,title:"Choose an API",content:" Accordion content",subTitle:"Slideshow"},
-    {img:Media,title:"Test API Vulnerability ",content:" Accordion content",subTitle:"Slideshow"},
-    {img:Media,title:"Upload API Specification",content:" Accordion content",subTitle:"Slideshow"},
-    {img:Media,title:"Evaluate Security Posture",content:" Accordion content",subTitle:"Slideshow"},
-    {img:Media,title:"Finish",content:" Accordion content",subTitle:"Slideshow"},
-
-  ];
+  {
+    img: Media,
+    title: "Choose an API",
+    content: " Accordion content",
+    subTitle: "Slideshow",
+  },
+  {
+    img: Media,
+    title: "Test API Vulnerability ",
+    content: " Accordion content",
+    subTitle: "Slideshow",
+  },
+  {
+    img: Media,
+    title: "Upload API Specification",
+    content: " Accordion content",
+    subTitle: "Slideshow",
+  },
+  {
+    img: Media,
+    title: "Evaluate Security Posture",
+    content: " Accordion content",
+    subTitle: "Slideshow",
+  },
+  {
+    img: Media,
+    title: "Finish",
+    content: " Accordion content",
+    subTitle: "Slideshow",
+  },
+];
 export const steps = [
   { title: "Choose an API", content: ChooseAPI },
   { title: "Test API Vulnerability", content: TestAPI },
   { title: "Upload API Specification", content: UploadAPI },
   { title: "Evaluate Security Posture", content: EvaluateSecurity },
   { title: "Finish", content: Finish },
+];
+
+export const filter = [
+  {
+    name: "Category",
+    checkbox: [
+      { name: "API Security (4)" },
+      { name: "Kubernetes (2)" },
+      { name: "Serverless (3)" },
+      { name: "Attack Path (3)" },
+      { name: "Compliance (3)" },
+    ],
+  },
+  {
+    name: "Industry Type",
+    checkbox: [
+      { name: "AFinancial Services (2)" },
+      { name: "Tech/Cloud-Born (1)" },
+      { name: "Tech/Cloud-Born (1)" },
+      { name: "Transport (2)" },
+      { name: "Retail (1)" },
+      { name: "Manufacturing (1)" },
+      { name: "Public Sector High (1)" },
+      { name: "Communication (1)" },
+    ],
+  },
+  {
+    name: "Job Role",
+    checkbox: [
+      { name: "Analyst (8)" },
+      { name: "Data Scientist (8)" },
+    ],
+  },
 ];
