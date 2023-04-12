@@ -154,6 +154,13 @@ export const instantPovCards = [
           " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
         time: "5:12 min demo",
       },
+      {
+        img: securityIcon,
+        heading: "Evaluate security posture of an API",
+        description:
+          " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+        time: "5:12 min demo",
+      },
     ],
   },
   {
