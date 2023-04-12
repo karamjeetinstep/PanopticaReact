@@ -12,6 +12,7 @@ import Finish from "../components/EvaluateAPI/Finish";
 import TestAPI from "../components/EvaluateAPI/TestAPI";
 import UploadAPI from "../components/EvaluateAPI/UploadAPI";
 import Media from "../assets/images/imges.svg";
+import securityIcon from "../assets/images/securityIcon.png";
 
 export const moduleCards = [
   { id: 1, img: FinancialServices, name: "Financial Services" },
@@ -126,5 +127,52 @@ export const filter = [
   {
     name: "Job Role",
     checkbox: [{ name: "Analyst (8)" }, { name: "Data Scientist (8)" }],
+  },
+];
+export const instantPovCards = [
+  {
+    name: "API Security (4)",
+    cards: [
+      {
+        img: securityIcon,
+        heading: "Evaluate security posture of an API",
+        description:
+          " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+        time: "5:12 min demo",
+      },
+      {
+        img: securityIcon,
+        heading: "Evaluate security posture of an API",
+        description:
+          " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+        time: "5:12 min demo",
+      },
+      {
+        img: securityIcon,
+        heading: "Evaluate security posture of an API",
+        description:
+          " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+        time: "5:12 min demo",
+      },
+    ],
+  },
+  {
+    name: "Kubernetes (2)",
+    cards: [
+      {
+        img: securityIcon,
+        heading: "Kubernetes",
+        description:
+          " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+        time: "5:12 min demo",
+      },
+      {
+        img: securityIcon,
+        heading: "Kubernetes",
+        description:
+          " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+        time: "5:12 min demo",
+      },
+    ],
   },
 ];
