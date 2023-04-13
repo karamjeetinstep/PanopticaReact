@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import backArrow from "../../assets/images/backArrow.png";
 import securityIcon from "../../assets/images/securityIcon.png";
 import { useNavigate } from "react-router-dom";
@@ -10,7 +10,16 @@ import CheckBox from "../../common/CheckBox";
 
 const InstantPOV = (props) => {
   const navigate = useNavigate();
-
+  const [selectedFilter, setSelectedFilter] = useState([]);
+  const onCheckBoxChange=(isChecked,id)=>{
+     if(isChecked){
+      console.log(selectedFilter,id)
+      setSelectedFilter([...selectedFilter,id]);
+     }else{
+      const filterData=selectedFilter.filter((item)=>item!==id);
+      setSelectedFilter(filterData);
+     }
+  }
   return (
     <div className="instantPOV">
       <div className="heading">
@@ -42,7 +51,7 @@ const InstantPOV = (props) => {
           {filter.map((filtItem) => (
             <Accordion
               title={filtItem.name}
-              content={<CheckBox listData={filtItem.checkbox} />}
+              content={<CheckBox onClick={onCheckBoxChange} listData={filtItem.checkbox} />}
             />
           ))}
         </div>
@@ -62,34 +71,44 @@ const InstantPOV = (props) => {
               </button>
             </div>
           </div>
-          {instantPovCards?.map((category) => (
-            <div className="API_Security">
-              <h2>{category.name}</h2>
-              <div className="row flex-wrap">
-                {
-                  category?.cards?.map((cardDetail)=><div className="col-md-33 mb-3 d-flex">
-                  <div className="api_sec_box">
-                    <img
-                      width={60}
-                      alt=""
-                      className="securityIcon"
-                      src={cardDetail.imge}
-                    ></img>
+          {instantPovCards?.map(
+            (item) =>
+            selectedFilter.includes(item.id) && (
+                <div className="API_Security">
+                  <h2>{item.name} &#40;<span>{item?.cards.length}</span>&#41;</h2>
+                  <div className="row flex-wrap">
+                    {item?.cards?.map((cardDetail) => (
+                      <div className="col-md-33 mb-3 d-flex">
+                        <div className="api_sec_box">
+                          <img
+                            width={60}
+                            alt=""
+                            className="securityIcon"
+                            src={cardDetail.img}
+                          ></img>
 
-                    <h3>{cardDetail.heading}</h3>
-                    <p>{cardDetail.description}</p>
-                    <span>{cardDetail.time}</span>
+                          <h3>{cardDetail.heading}</h3>
+                          <p>{cardDetail.description}</p>
+                          <span>{cardDetail.time}</span>
 
-                    <button className="backButton" onClick={()=>navigate("/security-academy")}>
-                      <span className="backbuttontext">Explore</span>
-                      <img className="rotate-180" alt="" src={backArrow}></img>
-                    </button>
+                          <button
+                            className="backButton"
+                            onClick={() => navigate("/security-academy")}
+                          >
+                            <span className="backbuttontext">Explore</span>
+                            <img
+                              className="rotate-180"
+                              alt=""
+                              src={backArrow}
+                            ></img>
+                          </button>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>)
-                }
-              </div>
-            </div>
-          ))}
+                </div>
+              )
+          )}
         </div>
       </div>
     </div>

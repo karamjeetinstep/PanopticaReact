@@ -5,12 +5,16 @@ import GreenRight from "../../../assets/images/Frame 1000005944-3.svg";
 import CrossBrown1 from "../../../assets/images/Frame 1000005944-2.svg";
 import CrossBrown2 from "../../../assets/images/Frame 1000005944-1.svg";
 import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
-
+import {modalData} from '../../../data'
 const ChooseAPI = (props) => {
-  const [status, setStatus] = useState(false);
+  const [zoomId, setZoomId] = useState(null);
 
-  const PositionChange = () => {
-    setStatus(!status);
+  const PositionChange = (id) => {
+    if(zoomId==id){
+      setZoomId(null)
+    }else{
+      setZoomId(id);
+    }
   };
 
   return (
@@ -37,119 +41,65 @@ const ChooseAPI = (props) => {
             <div className={`WindowBox `}>
               <img
                 width="100%"
-                className={status ? "blur-on" : "blur-off"}
+                className={zoomId ? "blur-on" : "blur-off"}
                 src={bgWindow}
                 alt=""
               />
 
               <div id="apiboxes" className="API_boxes">
-                <div
-                  onClick={PositionChange}
+                {modalData.map((item)=><div
+                  onClick={()=>PositionChange(item.id)}
                   className={`api_card_box mouse-pointer ${
-                    status ? "ScaleCard" : "ScaleCard-Close"
+                    zoomId==item.id ? "ScaleCard" : "ScaleCard-Close"
                   }`}
                 >
                   <div className="first_text">
                     {" "}
                     <img width={12} src={bgWindow} alt="" />
-                    <h2>Mobile Banking API</h2>
+                    <h2>{item.heading}</h2>
                   </div>
                   <div className="sec_text_box">
                     <div className="box">
                       <p>Port</p>
-                      <span>21016</span>
+                      <span>{item.port}</span>
                     </div>
                     <div className="box">
                       <p>Cluster</p>
-                      <span>finance-cluster</span>
+                      <span>{item.cluster}</span>
                     </div>
                     <div className="box">
                       <p>Name-space</p>
-                      <span>finance cluster</span>
+                      <span>{item.nameSpace}</span>
                     </div>
                     <div className="box">
                       <p>Gateway</p>
-                      <span>Kong</span>
+                      <span>{item.gateway}</span>
                     </div>
                   </div>
                   <div className="last_box_check">
                     <div className="check_boxes_icon">
                       <img width={12} src={CrossBrown3} alt="" />
-                      <p>2</p>
+                      <p>{item.thread1}</p>
                     </div>
                     <div className="line_"></div>
                     <div className="check_boxes_icon">
                       <img width={12} src={CrossBrown2} alt="" />
-                      <p>1</p>
+                      <p>{item.thread2}</p>
                     </div>
                     <div className="line_"></div>
 
                     <div className="check_boxes_icon">
                       <img width={12} src={CrossBrown1} alt="" />
-                      <p>5</p>
+                      <p>{item.thread3}</p>
                     </div>
                     <div className="line_"></div>
 
                     <div className="check_boxes_icon">
                       <img width={12} src={GreenRight} alt="" />
-                      <p>6</p>
+                      <p>{item.thread4}</p>
                     </div>
                   </div>
-                </div>
-
-                <div
-                  onClick={PositionChange}
-                  className={`api_card_box mouse-pointer ${
-                    status ? "ScaleCard" : "ScaleCard-Close"
-                  }`}
-                >
-                  <div className="first_text">
-                    {" "}
-                    <img width={12} src={bgWindow} alt="" />
-                    <h2>Mobile Banking API</h2>
-                  </div>
-                  <div className="sec_text_box">
-                    <div className="box">
-                      <p>Port</p>
-                      <span>21016</span>
-                    </div>
-                    <div className="box">
-                      <p>Cluster</p>
-                      <span>finance-cluster</span>
-                    </div>
-                    <div className="box">
-                      <p>Name-space</p>
-                      <span>finance cluster</span>
-                    </div>
-                    <div className="box">
-                      <p>Gateway</p>
-                      <span>Kong</span>
-                    </div>
-                  </div>
-                  <div className="last_box_check">
-                    <div className="check_boxes_icon">
-                      <img width={12} src={CrossBrown3} alt="" />
-                      <p>2</p>
-                    </div>
-                    <div className="line_"></div>
-                    <div className="check_boxes_icon">
-                      <img width={12} src={CrossBrown2} alt="" />
-                      <p>1</p>
-                    </div>
-                    <div className="line_"></div>
-
-                    <div className="check_boxes_icon">
-                      <img width={12} src={CrossBrown1} alt="" />
-                      <p>5</p>
-                    </div>
-                    <div className="line_"></div>
-
-                    <div className="check_boxes_icon">
-                      <img width={12} src={GreenRight} alt="" />
-                      <p>6</p>
-                    </div>
-                  </div>
-                </div>
+                </div>)}
               </div>
             </div>
           </div>
