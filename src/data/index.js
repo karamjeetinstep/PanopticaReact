@@ -104,34 +104,37 @@ export const filter = [
   {
     name: "Category",
     checkbox: [
-      { name: "API Security",id:1,length:4 },
-      { name: "Kubernetes",id:2,length:2 },
-      { name: "Serverless",id:3,length:3 },
-      { name: "Attack Path",id:4,length:3 },
-      { name: "Compliance",id:5,length:3 },
+      { name: "API Security", id: 1, length: 4 },
+      { name: "Kubernetes", id: 2, length: 2 },
+      { name: "Serverless", id: 3, length: 3 },
+      { name: "Attack Path", id: 4, length: 3 },
+      { name: "Compliance", id: 5, length: 3 },
     ],
   },
   {
     name: "Industry Type",
     checkbox: [
-      { name: "AFinancial Services",id:6,length:2  },
-      { name: "Tech/Cloud-Born",id:7,length:1  },
-      { name: "Transport",id:8,length:2  },
-      { name: "Retail",id:9,length:1  },
-      { name: "Manufacturing",id:10,length:1  },
-      { name: "Public Sector High",id:11,length:1  },
-      { name: "Communication",id:12,length:1  },
+      { name: "AFinancial Services", id: 6, length: 2 },
+      { name: "Tech/Cloud-Born", id: 7, length: 1 },
+      { name: "Transport", id: 8, length: 2 },
+      { name: "Retail", id: 9, length: 1 },
+      { name: "Manufacturing", id: 10, length: 1 },
+      { name: "Public Sector High", id: 11, length: 1 },
+      { name: "Communication", id: 12, length: 1 },
     ],
   },
   {
     name: "Job Role",
-    checkbox: [{ name: "Analyst" ,id:13,length:4 }, { name: "Data Scientist" ,id:14,length:4 }],
+    checkbox: [
+      { name: "Analyst", id: 13, length: 4 },
+      { name: "Data Scientist", id: 14, length: 4 },
+    ],
   },
 ];
 export const instantPovCards = [
   {
     name: "API Security",
-    id:1,
+    id: 1,
     cards: [
       {
         img: securityIcon,
@@ -164,7 +167,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:2,
+    id: 2,
     name: "Kubernetes",
     cards: [
       {
@@ -184,7 +187,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:3,
+    id: 3,
     name: "Serverless",
     cards: [
       {
@@ -211,7 +214,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:4,
+    id: 4,
     name: "Attack Path",
     cards: [
       {
@@ -238,7 +241,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:5,
+    id: 5,
     name: "Compliance",
     cards: [
       {
@@ -265,7 +268,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:6,
+    id: 6,
     name: "AFinancial Services",
     cards: [
       {
@@ -285,7 +288,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:7,
+    id: 7,
     name: "Tech/Cloud-Born",
     cards: [
       {
@@ -298,7 +301,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:8,
+    id: 8,
     name: "Transport",
     cards: [
       {
@@ -318,7 +321,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:9,
+    id: 9,
     name: "Retail",
     cards: [
       {
@@ -331,7 +334,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:10,
+    id: 10,
     name: "Manufacturing",
     cards: [
       {
@@ -344,7 +347,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:11,
+    id: 11,
     name: "Public Sector High",
     cards: [
       {
@@ -357,7 +360,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:12,
+    id: 12,
     name: "Communication",
     cards: [
       {
@@ -370,7 +373,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:13,
+    id: 13,
     name: "Analyst",
     cards: [
       {
@@ -386,13 +389,15 @@ export const instantPovCards = [
         description:
           " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
         time: "5:12 min demo",
-      },{
+      },
+      {
         img: securityIcon,
         heading: "Analyst",
         description:
           " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
         time: "5:12 min demo",
-      },{
+      },
+      {
         img: securityIcon,
         heading: "Analyst",
         description:
@@ -402,7 +407,7 @@ export const instantPovCards = [
     ],
   },
   {
-    id:14,
+    id: 14,
     name: "Data Scientist",
     cards: [
       {
@@ -436,8 +441,43 @@ export const instantPovCards = [
     ],
   },
 ];
+export const modalData = [
+  {id:1,
+    heading: "Mobile Banking API",
+    port: "21016",
+    cluster: "finance-cluster",
+    nameSpace: "finance cluster",
+    gateway: "Kong",
+    thread1:2,
+    thread2:1,
+    thread3:5,
+    thread4:6,
+  },
+  {id:2,
+    heading: "Conversion",
+    port: "21017",
+    cluster: "finance-cluster",
+    nameSpace: "finance cluster",
+    gateway: "Tyk",
+    thread1:2,
+    thread2:1,
+    thread3:3,
+    thread4:6,
+  },
+  {id:3,
+    heading: "Mutual Funds",
+    port: "52212",
+    cluster: "finance-cluster",
+    nameSpace: "finance cluster",
+    gateway: "Apigee X",
+    thread1:2,
+    thread2:1,
+    thread3:7,
+    thread4:9,
+  },
+];
 
-export const congatulationCard=[
+export const congatulationCard = [
   {
     img: securityIcon,
     heading: "Perform BFLA attack and analyse in Panoptica",
@@ -459,4 +499,4 @@ export const congatulationCard=[
       " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
     time: "3:23 min",
   },
-]
+];
