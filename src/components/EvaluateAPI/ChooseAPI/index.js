@@ -51,7 +51,7 @@ const ChooseAPI = (props) => {
                   onClick={()=>PositionChange(item.id)}
                   className={`api_card_box mouse-pointer ${
                     zoomId==item.id ? "ScaleCard" : "ScaleCard-Close"
-                  }`}
+                  } ${zoomId&&zoomId!==item.id &&"blur-on"}`}
                 >
                   <div className="first_text">
                     {" "}
