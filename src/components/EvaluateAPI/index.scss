@@ -1,31 +1,52 @@
-.evaluateAPI{
+.evaluateAPI {
+    position: relative;
     display: flex;
     padding-bottom: 5%;
-    .left{
-        width: 100%;
+    .left {
+        &.expand {
+            width: 100%;
+        }
+        &.collapse {
+            width: 100%;
+        }
     }
-    .rightModal{
-        width: 25%;
-        .modalHeading{
+    .rightModal {
+        overflow: hidden;
+        .bas {
+            position: absolute;
+            width: 25%;
+            right: 0;
+        }
+
+        &.open {
+            width: 25%;
+
+            opacity: 1;
+        }
+        &.close {
+            width: 0%;
+            opacity: 0;
+        }
+        .modalHeading {
             display: flex;
             justify-content: space-around;
-            .closeBotton{
+            .closeBotton {
                 cursor: pointer;
                 border: none;
                 background: transparent;
             }
         }
-        
-        .heading{
+
+        .heading {
             font-weight: 700;
             font-size: 12px;
             line-height: 18px;
-            color: #292A31;
+            color: #292a31;
         }
-        .detailtext{
+        .detailtext {
             font-size: 12px;
             line-height: 20px;
-            color: #292A31;
+            color: #292a31;
         }
     }
 }
