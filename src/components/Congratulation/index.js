@@ -1,9 +1,9 @@
 import React from "react";
-import "./index.scss";
 import SubHeader from "../../common/SubHeader";
 import Button from "../../common/Button";
 import { useNavigate } from "react-router-dom";
 import iconImage from "../../assets/images/Frame 1000006035.svg";
+import { congatulationCard } from "../../data/";
 
 const Congratulation = (props) => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Congratulation = (props) => {
             <span>You have successfully completed this module</span>
             <Button
               onClick={() => {
-                navigate("/");
+                navigate("/evaluate-api");
               }}
               background="white"
               border="2px solid #007aa3"
@@ -62,67 +62,29 @@ const Congratulation = (props) => {
         <div className="expolreUseCase">
           <div className="cardsHeading">
             <h3>Lets explore some more use cases below...</h3>
-            <a className="viewAllModules" href="/instant-pov">
+            <a className="viewAllModules" href="instant-pov">
               View All Modules
             </a>
           </div>
           <div className="cards">
             <div className="API_Security">
               <div className="row flex-wrap">
-                <div className="col-md-33 mb-3 d-flex">
-                  <div className="api_sec_box">
-                    <img
-                      width={60}
-                      alt=""
-                      className="securityIcon"
-                      src={iconImage}
-                    ></img>
+                {congatulationCard.map((card) => (
+                  <div className="col-md-33 mb-3 d-flex">
+                    <div className="api_sec_box">
+                      <img
+                        width={60}
+                        alt=""
+                        className="securityIcon"
+                        src={card.img}
+                      ></img>
 
-                    <h3>Perform BFLA attack and analyse in Panoptica</h3>
-                    <p>
-                      Monitoring APIs and related security risks across
-                      multi-cloud environments requires comprehensive visibility
-                      and continuous API discovery.
-                    </p>
-                    <span>3:23 min</span>
+                      <h3>{card.heading}</h3>
+                      <p>{card.description}</p>
+                      <span>{card.time}</span>
+                    </div>
                   </div>
-                </div>
-                <div className="col-md-33 mb-3 d-flex">
-                  <div className="api_sec_box">
-                    <img
-                      width={60}
-                      alt=""
-                      className="securityIcon"
-                      src={iconImage}
-                    ></img>
-
-                    <h3>Perform BFLA attack and analyse in Panoptica</h3>
-                    <p>
-                      Monitoring APIs and related security risks across
-                      multi-cloud environments requires comprehensive visibility
-                      and continuous API discovery.
-                    </p>
-                    <span>3:23 min</span>
-                  </div>
-                </div>
-                <div className="col-md-33 mb-3 d-flex">
-                  <div className="api_sec_box">
-                    <img
-                      width={60}
-                      alt=""
-                      className="securityIcon"
-                      src={iconImage}
-                    ></img>
-
-                    <h3>Perform BFLA attack and analyse in Panoptica</h3>
-                    <p>
-                      Monitoring APIs and related security risks across
-                      multi-cloud environments requires comprehensive visibility
-                      and continuous API discovery.
-                    </p>
-                    <span>3:23 min</span>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

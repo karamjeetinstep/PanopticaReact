@@ -183,3 +183,27 @@ export const instantPovCards = [
     ],
   },
 ];
+
+export const congatulationCard=[
+  {
+    img: securityIcon,
+    heading: "Perform BFLA attack and analyse in Panoptica",
+    description:
+      " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+    time: "3:23 min",
+  },
+  {
+    img: securityIcon,
+    heading: "Perform BFLA attack and analyse in Panoptica",
+    description:
+      " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+    time: "3:23 min",
+  },
+  {
+    img: securityIcon,
+    heading: "Perform BFLA attack and analyse in Panoptica",
+    description:
+      " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
+    time: "3:23 min",
+  },
+]
