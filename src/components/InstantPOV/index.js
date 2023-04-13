@@ -10,7 +10,8 @@ import CheckBox from "../../common/CheckBox";
 
 const InstantPOV = (props) => {
   const navigate = useNavigate();
-  const [selectedFilter, setSelectedFilter] = useState([]);
+  const defaultSelected=[1,2];
+  const [selectedFilter, setSelectedFilter] = useState(defaultSelected);
   const onCheckBoxChange=(isChecked,id)=>{
      if(isChecked){
       console.log(selectedFilter,id)
@@ -51,7 +52,7 @@ const InstantPOV = (props) => {
           {filter.map((filtItem) => (
             <Accordion
               title={filtItem.name}
-              content={<CheckBox onClick={onCheckBoxChange} listData={filtItem.checkbox} />}
+              content={<CheckBox defaultSelected={defaultSelected} onClick={onCheckBoxChange} listData={filtItem.checkbox} />}
             />
           ))}
         </div>
