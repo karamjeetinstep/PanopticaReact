@@ -1,28 +1,33 @@
 import React from "react";
 import Stepper from "../../common/Stepper/stepper";
 import "./index.scss";
-import { useSelector ,useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { steps } from "../../data";
 import RightModal from "./rightModal";
-import SubHeader from '../../common/SubHeader';
+import SubHeader from "../../common/SubHeader";
 import { handleSideModal } from "../../redux/reducer/modal";
-import Footer from '../../common/Footer'
+import Footer from "../../common/Footer";
 const EvaluateAPI = (props) => {
   const isSidePopUpOpen = useSelector(
     (state) => state.modalsData.isSidePopUpOpen
   );
-  const dispatch =useDispatch();
+  const dispatch = useDispatch();
   return (
     <>
-      <SubHeader/>
+      <SubHeader />
       <div className="evaluateAPI">
-        <div className="left">
+        <div className={`left ${isSidePopUpOpen ? "expand" : "collapse"}`}>
           <Stepper steps={steps} value={1} />
           <></>
         </div>
-        {isSidePopUpOpen && <RightModal  onClick={()=>{dispatch(handleSideModal(false))}}/>}
+        <RightModal
+          isOpen={isSidePopUpOpen}
+          onClick={() => {
+            dispatch(handleSideModal(false));
+          }}
+        />
       </div>
-         <Footer firstButtontext='Previous' secondbuttonText='Next'/>
+      <Footer firstButtontext="Previous" secondbuttonText="Next" />
     </>
   );
 };

@@ -3,6 +3,8 @@ import "./index.scss";
 import SubHeader from "../../common/SubHeader";
 import Button from "../../common/Button";
 import { useNavigate } from "react-router-dom";
+import iconImage from "../../assets/images/Frame 1000006035.svg";
+
 const Congratulation = (props) => {
   const navigate = useNavigate();
   return (
@@ -28,19 +30,23 @@ const Congratulation = (props) => {
         <div className="nextModule">
           <span>Next module for you</span>
           <div className="nextModuleDetail">
-            <div className="defination">
-              <h3>Broken Function Level Authorization</h3>
-              <p>
-                Broken Function Level Authorization (BFLA) is a type of security
-                vulnerability that occurs when an application fails to properly
-                enforce access controls for different user roles or permissions.
-              </p>
-              <Button
-                onClick={() => {
-                  navigate("/evaluate-api");
-                }}
-                text="Start Module"
-              />
+            <div className="defination d-flex">
+              <img src={iconImage} className="" alt="" />
+              <div>
+                <h3>Broken Function Level Authorization</h3>
+                <p>
+                  Broken Function Level Authorization (BFLA) is a type of
+                  security vulnerability that occurs when an application fails
+                  to properly enforce access controls for different user roles
+                  or permissions.
+                </p>
+                <Button
+                  onClick={() => {
+                    navigate("/evaluate-api");
+                  }}
+                  text="Start Module"
+                />
+              </div>
             </div>
             <div className="whatYouGet">
               <h3> What you will get after this module?</h3>
@@ -61,7 +67,64 @@ const Congratulation = (props) => {
             </a>
           </div>
           <div className="cards">
-            <div className="card"></div>
+            <div className="API_Security">
+              <div className="row flex-wrap">
+                <div className="col-md-33 mb-3 d-flex">
+                  <div className="api_sec_box">
+                    <img
+                      width={60}
+                      alt=""
+                      className="securityIcon"
+                      src={iconImage}
+                    ></img>
+
+                    <h3>Perform BFLA attack and analyse in Panoptica</h3>
+                    <p>
+                      Monitoring APIs and related security risks across
+                      multi-cloud environments requires comprehensive visibility
+                      and continuous API discovery.
+                    </p>
+                    <span>3:23 min</span>
+                  </div>
+                </div>
+                <div className="col-md-33 mb-3 d-flex">
+                  <div className="api_sec_box">
+                    <img
+                      width={60}
+                      alt=""
+                      className="securityIcon"
+                      src={iconImage}
+                    ></img>
+
+                    <h3>Perform BFLA attack and analyse in Panoptica</h3>
+                    <p>
+                      Monitoring APIs and related security risks across
+                      multi-cloud environments requires comprehensive visibility
+                      and continuous API discovery.
+                    </p>
+                    <span>3:23 min</span>
+                  </div>
+                </div>
+                <div className="col-md-33 mb-3 d-flex">
+                  <div className="api_sec_box">
+                    <img
+                      width={60}
+                      alt=""
+                      className="securityIcon"
+                      src={iconImage}
+                    ></img>
+
+                    <h3>Perform BFLA attack and analyse in Panoptica</h3>
+                    <p>
+                      Monitoring APIs and related security risks across
+                      multi-cloud environments requires comprehensive visibility
+                      and continuous API discovery.
+                    </p>
+                    <span>3:23 min</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
