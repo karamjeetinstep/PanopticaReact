@@ -9,8 +9,9 @@ const CheckBox = (props) => {
           type="checkbox"
           name="checkbox"
           value=""
+          onChange={(e)=>{props.onClick(e.target.checked,item.id)}}
         />
-        <p>{item.name}</p>
+        <p>{item.name} &#40;<span>{item.length}</span>&#41;</p>
       </div>)
       }  
     </>
