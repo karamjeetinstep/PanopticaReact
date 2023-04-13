@@ -29,7 +29,7 @@ const SubHeader = ({showFileIcon}) => {
             />
             <Button
               onClick={() => {
-                navigate("/");
+                // navigate("/");
               }}
               text="Sign Up"
             />
