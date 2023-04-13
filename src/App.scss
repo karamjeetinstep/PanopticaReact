@@ -548,233 +548,233 @@
 .Congratulation {
   padding: 0 150px;
   .heading {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      h1 {
-          font-family: "CiscoSans";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 45px;
-          line-height: 52px;
-          /* identical to box height, or 116% */
-          margin-bottom: 12px;
-          margin-top: 71px;
-          /* Grey/100 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 45px;
+      line-height: 52px;
+      /* identical to box height, or 116% */
+      margin-bottom: 12px;
+      margin-top: 71px;
+      /* Grey/100 */
 
-          color: #292a31;
-      }
-      span {
-          font-family: "CiscoSans";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 30px;
-          line-height: 41px;
-          /* identical to box height */
-          color: #000000;
-      }
-      button {
-          margin-top: 32px !important;
-          margin-bottom: 77px !important;
-      }
+      color: #292a31;
+    }
+    span {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 41px;
+      /* identical to box height */
+      color: #000000;
+    }
+    button {
+      margin-top: 32px !important;
+      margin-bottom: 77px !important;
+    }
   }
   .nextModule {
-      padding: 0px 0.75rem;
-      span {
-          font-family: "CiscoSans";
-          font-style: normal;
-          font-weight: 350;
-          font-size: 22px;
-          line-height: 37px;
-          /* identical to box height, or 168% */
+    padding: 0px 0.75rem;
+    span {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 350;
+      font-size: 22px;
+      line-height: 37px;
+      /* identical to box height, or 168% */
 
-          color: #000000;
-      }
+      color: #000000;
+    }
   }
   .nextModuleDetail {
-      margin-top: 20px !important;
-      // height: 205px;
-      display: flex;
-      background: #ffffff;
-      border: 1px solid #d2d2d6;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 40px;
-      .defination {
-          width: 60%;
-          align-items: flex-start;
-          border-right: 1px solid #d5d5e0;
-          img {
-              margin-right: 20px;
-          }
-          h3 {
-              font-family: "CiscoSans";
-              font-style: normal;
-              font-weight: 400;
-              font-size: 18px;
-              line-height: 30px;
-              /* identical to box height, or 167% */
-
-              /* Gray / 80 */
-              margin-bottom: 10px;
-
-              color: #3a3a44;
-          }
-          p {
-              font-family: "CiscoSans";
-              font-style: normal;
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 22px;
-              /* or 157% */
-
-              /* Gray / 60 */
-              margin-bottom: 20px;
-
-              color: #5a5b6a;
-          }
+    margin-top: 20px !important;
+    // height: 205px;
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #d2d2d6;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 40px;
+    .defination {
+      width: 60%;
+      align-items: flex-start;
+      border-right: 1px solid #d5d5e0;
+      img {
+        margin-right: 20px;
       }
-      .whatYouGet {
-          padding-left: 78px;
-          padding-top: 10px;
-          padding-bottom: 10px;
-          h3 {
-              font-family: "CiscoSans";
-              font-style: normal;
-              font-weight: 700;
-              font-size: 14px;
-              line-height: 22px;
-              /* identical to box height, or 157% */
+      h3 {
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        /* identical to box height, or 167% */
 
-              /* Gray / 80 */
+        /* Gray / 80 */
+        margin-bottom: 10px;
 
-              color: #3a3a44;
-              margin-bottom: 14px;
-          }
-          ul {
-              padding-left: 18px;
-          }
-          ul li {
-              font-family: "CiscoSans";
-              font-style: normal;
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 22px;
-              /* identical to box height, or 157% */
-
-              /* Grey/70 */
-
-              color: #5a5b6a;
-              margin-bottom: 7px;
-          }
+        color: #3a3a44;
       }
+      p {
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        /* or 157% */
+
+        /* Gray / 60 */
+        margin-bottom: 20px;
+
+        color: #5a5b6a;
+      }
+    }
+    .whatYouGet {
+      padding-left: 78px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      h3 {
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 22px;
+        /* identical to box height, or 157% */
+
+        /* Gray / 80 */
+
+        color: #3a3a44;
+        margin-bottom: 14px;
+      }
+      ul {
+        padding-left: 18px;
+      }
+      ul li {
+        font-family: "CiscoSans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        /* identical to box height, or 157% */
+
+        /* Grey/70 */
+
+        color: #5a5b6a;
+        margin-bottom: 7px;
+      }
+    }
   }
   .expolreUseCase {
-      h3 {
+    h3 {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 350;
+      font-size: 22px;
+      line-height: 37px;
+      /* identical to box height, or 168% */
+
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .cardsHeading {
+      padding: 0px 0.75rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .viewAllModules {
+        color: #007aa3;
+        text-decoration: none;
+      }
+    }
+    .cards {
+      .API_Security {
+        margin-bottom: 30px;
+        h2 {
           font-family: "CiscoSans";
           font-style: normal;
-          font-weight: 350;
-          font-size: 22px;
-          line-height: 37px;
-          /* identical to box height, or 168% */
-
-          color: #000000;
-          margin-bottom: 20px;
-      }
-      .cardsHeading {
-          padding: 0px 0.75rem;
-
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+          padding: 0 0.75rem;
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          .viewAllModules {
-              color: #007aa3;
-              text-decoration: none;
-          }
-      }
-      .cards {
-          .API_Security {
-              margin-bottom: 30px;
-              h2 {
-                  font-family: "CiscoSans";
-                  font-style: normal;
-                  font-weight: 700;
-                  font-size: 16px;
-                  line-height: 24px;
-                  /* identical to box height, or 150% */
-                  padding: 0 0.75rem;
-                  display: flex;
-                  align-items: center;
-                  letter-spacing: 0.15px;
+          letter-spacing: 0.15px;
 
-                  /* Neutral/900 */
-                  margin-bottom: 15px;
-                  color: #484851;
-              }
-              .api_sec_box {
-                  box-sizing: border-box;
-                  padding: 11px 24px;
-                  gap: 10px;
-                  width: 100%;
-                  background: #ffffff;
-                  border: 1px solid #e1e1e3;
-                  border-radius: 12px;
-                  img {
-                      margin-bottom: 10px;
-                  }
-                  h3 {
-                      font-family: "CiscoSans";
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 18px;
-                      line-height: 30px;
-                      color: #3a3a44;
-                      margin-bottom: 5px;
-                  }
-                  p {
-                      font-family: "CiscoSans";
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 22px;
-                      color: #5a5b6a;
-                      margin-bottom: 5px;
-                  }
-                  span {
-                      font-family: "CiscoSans";
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      line-height: 22px;
-                      color: #9696a0;
-                      margin-bottom: 10px !important;
-                  }
-                  button {
-                      display: flex;
-                      align-items: center;
-                      gap: 8px;
-                      border: 0;
-                      background: none;
-                      font-family: "CiscoSans";
-                      font-style: normal;
-                      font-weight: 400;
-                      font-size: 14px;
-                      cursor: pointer;
-                      line-height: 22px;
-                      color: #007aa3;
-                      margin-top: 10px;
-                  }
-                  button span {
-                      color: #007aa3;
-                      margin-bottom: 0 !important;
-                  }
-                  button img {
-                      margin: 0 !important;
-                  }
-              }
+          /* Neutral/900 */
+          margin-bottom: 15px;
+          color: #484851;
+        }
+        .api_sec_box {
+          box-sizing: border-box;
+          padding: 11px 24px;
+          gap: 10px;
+          width: 100%;
+          background: #ffffff;
+          border: 1px solid #e1e1e3;
+          border-radius: 12px;
+          img {
+            margin-bottom: 10px;
           }
+          h3 {
+            font-family: "CiscoSans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: #3a3a44;
+            margin-bottom: 5px;
+          }
+          p {
+            font-family: "CiscoSans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #5a5b6a;
+            margin-bottom: 5px;
+          }
+          span {
+            font-family: "CiscoSans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #9696a0;
+            margin-bottom: 10px !important;
+          }
+          button {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 0;
+            background: none;
+            font-family: "CiscoSans";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+            line-height: 22px;
+            color: #007aa3;
+            margin-top: 10px;
+          }
+          button span {
+            color: #007aa3;
+            margin-bottom: 0 !important;
+          }
+          button img {
+            margin: 0 !important;
+          }
+        }
       }
+    }
   }
 }
 
@@ -848,7 +848,239 @@
   }
 }
 // stepper css ended
+// chooseAPI started
+
+.chooseAPI {
+  .left_side_txt {
+    padding-right: calc(82px - 12px);
+    height: 100%;
+    h1 {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 29px;
+      line-height: 54px;
+      /* identical to box height, or 186% */
+
+      color: #000000;
+    }
+    p {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      /* or 157% */
+
+      /* Gray / 90 */
+
+      color: #292a31;
+    }
+  }
+  .right_side_txt_box {
+    h1 {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      /* identical to box height, or 167% */
+
+      color: #000000;
+    }
+    p {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      /* identical to box height, or 157% */
+
+      /* Gray / 90 */
+
+      color: #292a31;
+      margin-bottom: 35px;
+    }
+    .WindowBox {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    .API_boxes {
+      position: absolute;
+      width: 461px;
+
+      .api_card_box {
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 22.7955px 15.4px 15px;
+        gap: 8px;
+        background: #ffffff;
+        box-shadow: 0px 8.6602px 17.3204px rgba(0, 0, 0, 0.05);
+        border-radius: 5.69887px;
+        position: relative;
+        &:hover {
+          box-shadow: 0px 8.6602px 17px rgba(0, 0, 0, 0.2);
+        }
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   width: 105%;
+        //   height: 100%;
+        //   top: 0;
+        //   left: 0;
+        //   z-index: -1;
+        //   background: linear-gradient(86.04deg, #487ad7 0%, #4bccd0 100%), linear-gradient(0deg, #ffffff, #ffffff);
+        // }
+      }
+      .first_text {
+        display: flex;
+        gap: 8px;
+        h2 {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          /* or 126% */
+
+          letter-spacing: 0.0025em;
+
+          /* Neutral/900 */
+
+          color: #484851;
+        }
+      }
+      .sec_text_box {
+        width: 100%;
+        padding-bottom: 9.5px;
+        margin-bottom: 1.5px;
+        border-bottom: 0.529717px solid #e7e7ed;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .box {
+          display: flex;
+          flex-direction: column;
+          p {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 9px;
+            line-height: 12px;
+            /* identical to box height, or 133% */
+
+            letter-spacing: 0.0025em;
+
+            /* Grey/70 */
+            margin-bottom: 3px;
+
+            color: #5a5b6a;
+          }
+          span {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            /* identical to box height, or 120% */
+
+            letter-spacing: 0.0025em;
+
+            /* Neutral/900 */
+
+            color: #484851;
+          }
+        }
+      }
+      .last_box_check {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        .line_ {
+          width: 1px;
+          border-left: 0.2px solid #e7e7ed;
+        }
+        .check_boxes_icon {
+          display: flex;
+          gap: 5px;
+
+          p {
+            margin: 0;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            /* identical to box height, or 120% */
+
+            letter-spacing: 0.0025em;
+
+            /* Neutral/900 */
+
+            color: #484851;
+          }
+        }
+      }
+    }
+  }
+}
+
+// chooseAPI ended
+//footer css started
+.footer {
+  display: flex;
+  padding: 1% 3%;
+  align-items: center;
+  background: #0d274d;
+  justify-content: flex-end;
+  .backButton {
+    height: 38px;
+    cursor: pointer;
+    background: #0d274d;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    color: white;
+    padding: 0 3%;
+  }
+  .nextButton {
+    padding: 0 3%;
+    cursor: pointer;
+    color: #f7f7f7;
+    margin-left: 1%;
+    height: 38px;
+    border: none;
+    background: #007aa3;
+    border-radius: 30px;
+  }
+}
+//footer css ended
 // Gobals Css
+
+.ScaleCard {
+  transform: scale(2) !important;
+  z-index: 10;
+}
+.ScaleCard-Close {
+  transform: scale(1) !important;
+  z-index: 1;
+}
+.blur-on {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+.blur-off {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
 .mouse-pointer {
   cursor: pointer;
 }
@@ -941,6 +1173,13 @@
   flex: 0 0 33.33333%;
   max-width: 33.33333%;
 }
+.col-md-6 {
+  padding: 0px 0.75rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -1032,34 +1271,6 @@
 
   color: #5a5b6a;
 }
-//footer css started
-.footer {
-  display: flex;
-  padding: 1% 3%;
-  align-items: center;
-  background: #0d274d;
-  justify-content: flex-end;
-  .backButton {
-    height: 38px;
-    cursor: pointer;
-    background: #0d274d;
-    border: 2px solid #ffffff;
-    border-radius: 30px;
-    color: white;
-    padding: 0 3%;
-  }
-  .nextButton {
-    padding: 0 3%;
-    cursor: pointer;
-    color: #f7f7f7;
-    margin-left: 1%;
-    height: 38px;
-    border: none;
-    background: #007aa3;
-    border-radius: 30px;
-  }
-}
-//footer css ended
 
 // media
 
