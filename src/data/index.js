@@ -13,6 +13,10 @@ import TestAPI from "../components/EvaluateAPI/TestAPI";
 import UploadAPI from "../components/EvaluateAPI/UploadAPI";
 import Media from "../assets/images/imges.svg";
 import securityIcon from "../assets/images/securityIcon.png";
+import CrossBrown3 from "../assets/images/Frame 1000005944.svg";
+import CrossBrown2 from "../assets/images/Frame 1000005944-1.svg";
+
+
 
 export const moduleCards = [
   { id: 1, img: FinancialServices, name: "Financial Services" },
@@ -482,37 +486,37 @@ export const modalData = [
 export const testAPIModalData = [
   {
     id: 1,
-    heading: "SSL Vulnerability",
-    status: { name: "Critical", icon: "" },
+    heading: "Expired certificate",
+    status: { name: "Critical", icon: CrossBrown3 },
     description: "SSL is vulnerable to a CVE.",
     affectedElements: ["Mobilebanking-fin-1.com +2 more"],
     category: "Network",
     source: "Api fuzzer",
-    Mitigation:
+    mitigation:
       "Review the CVE and perform the recommended action(s) for fixing the issue.",
   },
   {
     id: 2,
     heading: "Missing Security Scheme",
-    status: { name: "Critical", icon: "" },
+    status: { name: "Critical", icon: CrossBrown3 },
     description:
       "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
     affectedElements: ["Finace-cluster1.com"],
     category: "Api-specifications",
     source: "Api fuzzer",
-    Mitigation:
+    mitigation:
       "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
   },
   {
     id: 3,
     heading: "Authentication Issue",
-    status: { name: "High", icon: "" },
+    status: { name: "High", icon: CrossBrown2 },
     description:
       "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
     affectedElements: ["MFinace-cluster2.com"],
     category: "Api-specifications",
     source: "Oas analyser",
-    Mitigation:
+    mitigation:
       "Make sure that the server performs all the needed authorization checks.",
   },
 ];
