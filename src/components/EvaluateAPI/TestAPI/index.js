@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.scss";
 import bgWindow from "../../../assets/images/Web Tiles - 2nd Step.jpg";
 import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
-import { modalData } from "../../../data";
+import { testAPIModalData } from "../../../data";
 
 const TestAPI = (props) => {
   const [zoomId, setZoomId] = useState(null);
@@ -44,7 +44,7 @@ const TestAPI = (props) => {
               />
 
               <div id="apiboxes" className="API_boxes">
-                {modalData.map((item) => (
+                {testAPIModalData.map((item) => (
                   <div
                     onClick={() => PositionChange(item.id)}
                     className={`api_card_box mouse-pointer  ${
@@ -57,38 +57,30 @@ const TestAPI = (props) => {
                       </div>
                       <div className="left_area">
                         <div className="d-flex">
-                          <h1>Expired certificate</h1>
+                          <h1>{item.heading}</h1>
                           <div className="icon_boxes">
-                            <img width={12} src={CrossBrown3} alt="" />{" "}
-                            <p>Critical</p>
+                            <img width={12} src={item.status.icon} alt="" />{" "}
+                            <p>{item.status.name}</p>
                           </div>
                         </div>
-                        <p>
-                          This certificate has expired. While the traffic to the
-                          host is still encrypted, it may be vulnerable to new
-                          attacks such as man-in-the-middle attacks. Individual
-                          are also vulnerable to fraud and identity theft.
-                        </p>
+                        <p>{item.description}</p>
                         <div className="sec_text-box">
                           <div className="one-text">
                             <span>Affected Elements</span>
-                            <p>Mobilebanking-fin-1.com +2 more</p>
+                            <p>{item.affectedElements}</p>
                           </div>
                           <div className="one-text">
                             <span>Category</span>
-                            <p>Network</p>
+                            <p>{item.category}</p>
                           </div>
                           <div className="one-text">
                             <span>Source</span>
-                            <p>Shodan</p>
+                            <p>{item.source}</p>
                           </div>
                         </div>
                         <div className="one-text-bottom">
                           <span>Mitigation</span>
-                          <p className="last">
-                            Obtain and install an updated certificate from an
-                            industry certificate authority as soon as possible.
-                          </p>
+                          <p className="last">{item.mitigation}</p>
                         </div>
                       </div>
                     </div>
