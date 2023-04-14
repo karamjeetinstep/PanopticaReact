@@ -442,38 +442,78 @@ export const instantPovCards = [
   },
 ];
 export const modalData = [
-  {id:1,
+  {
+    id: 1,
     heading: "Mobile Banking API",
     port: "21016",
     cluster: "finance-cluster",
     nameSpace: "finance cluster",
     gateway: "Kong",
-    thread1:2,
-    thread2:1,
-    thread3:5,
-    thread4:6,
+    thread1: 2,
+    thread2: 1,
+    thread3: 5,
+    thread4: 6,
   },
-  {id:2,
+  {
+    id: 2,
     heading: "Conversion",
     port: "21017",
     cluster: "finance-cluster",
     nameSpace: "finance cluster",
     gateway: "Tyk",
-    thread1:2,
-    thread2:1,
-    thread3:3,
-    thread4:6,
+    thread1: 2,
+    thread2: 1,
+    thread3: 3,
+    thread4: 6,
   },
-  {id:3,
+  {
+    id: 3,
     heading: "Mutual Funds",
     port: "52212",
     cluster: "finance-cluster",
     nameSpace: "finance cluster",
     gateway: "Apigee X",
-    thread1:2,
-    thread2:1,
-    thread3:7,
-    thread4:9,
+    thread1: 2,
+    thread2: 1,
+    thread3: 7,
+    thread4: 9,
+  },
+];
+export const testAPIModalData = [
+  {
+    id: 1,
+    heading: "SSL Vulnerability",
+    status: { name: "Critical", icon: "" },
+    description: "SSL is vulnerable to a CVE.",
+    affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+    category: "Network",
+    source: "Api fuzzer",
+    Mitigation:
+      "Review the CVE and perform the recommended action(s) for fixing the issue.",
+  },
+  {
+    id: 2,
+    heading: "Missing Security Scheme",
+    status: { name: "Critical", icon: "" },
+    description:
+      "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+    affectedElements: ["Finace-cluster1.com"],
+    category: "Api-specifications",
+    source: "Api fuzzer",
+    Mitigation:
+      "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+  },
+  {
+    id: 3,
+    heading: "Authentication Issue",
+    status: { name: "High", icon: "" },
+    description:
+      "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+    affectedElements: ["MFinace-cluster2.com"],
+    category: "Api-specifications",
+    source: "Oas analyser",
+    Mitigation:
+      "Make sure that the server performs all the needed authorization checks.",
   },
 ];
 
