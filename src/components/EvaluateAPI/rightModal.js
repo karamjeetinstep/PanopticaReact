@@ -7,7 +7,7 @@ const RightModal = (props) => {
         <div className="modalHeading">
           <h3>Find out more</h3>
           <button className="closeBotton" onClick={props.onClick}>
-            <img alt="" src={crossIcon}></img>
+            <img alt="" src={crossIcon} />
           </button>
         </div>
         <h5 className="heading">This is a long title to test this</h5>

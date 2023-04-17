@@ -1,23 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.scss";
 import bgWindow from "../../../assets/images/Frame 1000005690.png";
-import GreenRight from "../../../assets/images/Frame 1000005944-3.svg";
-import CrossBrown1 from "../../../assets/images/Frame 1000005944-2.svg";
-import CrossBrown2 from "../../../assets/images/Frame 1000005944-1.svg";
-import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
-import { modalData } from "../../../data";
+
 import Accordion from "../../SecurityAcademy/Accordion";
 
 const UploadAPI = (props) => {
-  const [zoomId, setZoomId] = useState(null);
-
-  const PositionChange = (id) => {
-    if (zoomId == id) {
-      setZoomId(null);
-    } else {
-      setZoomId(id);
-    }
-  };
   return (
     <div className="uploadAPI chooseAPI">
       <div className="row">
@@ -43,12 +30,7 @@ const UploadAPI = (props) => {
               specification and the actual behaviour of the API in run-time.
             </p>
             <div className={`WindowBox align-items-start `}>
-              <img
-                width="100%"
-                className={zoomId ? "blur-on" : "blur-off"}
-                src={bgWindow}
-                alt=""
-              />
+              <img width="100%" src={bgWindow} alt="" />
 
               <div id="apiboxes" className="API_boxes ">
                 <div className="api_card_box box-acc mouse-pointer ">
