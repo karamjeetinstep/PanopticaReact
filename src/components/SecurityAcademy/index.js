@@ -4,10 +4,14 @@ import Button from "../../common/Button";
 import { BsArrowLeft } from "react-icons/bs";
 import EvaluteImg from "../../assets/images/Frame 1000005980.svg";
 import Accordion from "./Accordion";
+import { useDispatch , useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import {setSlectedmodule} from '../../redux/reducer/modal';
+
 const SecurityAcademy = (props) => {
   const navigate = useNavigate();
-  const [isModuleSelected, setIsModuleSelected] = useState(null);
+  const dispatch =useDispatch();
+  const selectedModuleId=useSelector((state)=>state.modalsData.selectedModuleId);
   return (
     <div className="container_One">
       <div className="row">
@@ -65,10 +69,10 @@ const SecurityAcademy = (props) => {
               {moduleCards.map((item) => (
                 <button
                   onClick={() => {
-                    setIsModuleSelected(item.id);
+                   dispatch(setSlectedmodule(item.id))
                   }}
                   className={`industry_box ${
-                    isModuleSelected === item.id && "selectedModule"
+                    selectedModuleId === item.id && "selectedModule"
                   }`}
                 >
                   <img src={item.img} alt="" />
@@ -89,9 +93,9 @@ const SecurityAcademy = (props) => {
               text="See other modules"
             />
             <Button
-              disabled={!isModuleSelected}
+              disabled={!selectedModuleId}
               onClick={() => {
-                navigate("/evaluate-api");
+                navigate(`/evaluate-api?id=${selectedModuleId}`);
               }}
               text="Start Module"
             />

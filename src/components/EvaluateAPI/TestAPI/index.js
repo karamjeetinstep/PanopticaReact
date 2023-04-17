@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.scss";
 import bgWindow from "../../../assets/images/Web Tiles - 2nd Step.jpg";
-import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
-import { testAPIModalData } from "../../../data";
+import { moduleCards } from "../../../data";
+import { useLocation } from "react-router-dom"
 
 const TestAPI = (props) => {
   const [zoomId, setZoomId] = useState(null);
+  const [selectedModuleData, setSelectedModuleData] = useState({});
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const quesryParam = queryParams.get("id");
+
+  useEffect(()=>{
+    setSelectedModuleData(moduleCards.find((item)=> quesryParam==item.id))
+  },[])
 
   const PositionChange = (id) => {
     if (zoomId === id) {
@@ -20,21 +28,15 @@ const TestAPI = (props) => {
         <div className="col-md-5">
           <div className="left_side_txt d-flex align-items-center">
             <div>
-              <h1>Risk findings in APIs</h1>
-              <p>
-                The findings that we obtain following an evaluation <br /> of
-                the APIs are the main emphasis on the right.
-              </p>
+            <h1>{selectedModuleData?.step2ModuleData?.topHeading}</h1>
+              <p>{selectedModuleData?.step2ModuleData?.topDescription}</p>
             </div>
           </div>
         </div>
         <div className="col-md-7">
           <div className="right_side_txt_box">
-            <h1>Test API Vulnerability</h1>
-            <p>
-              Evaluating the selected API collection and identifying
-              vulnerabilities and remediations for the same.
-            </p>
+          <h1>{selectedModuleData?.step2ModuleData?.leftHeading}</h1>
+            <p>{selectedModuleData?.step2ModuleData?.leftDescription}</p>
             <div className={`WindowBox `}>
               <img
                 width="100%"
@@ -44,7 +46,7 @@ const TestAPI = (props) => {
               />
 
               <div id="apiboxes" className="API_boxes">
-                {testAPIModalData.map((item) => (
+              {selectedModuleData?.step2ModuleData?.cards?.map((item) => (
                   <div
                     onClick={() => PositionChange(item.id)}
                     className={`api_card_box mouse-pointer  ${
