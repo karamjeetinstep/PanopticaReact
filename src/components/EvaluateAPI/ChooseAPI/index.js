@@ -1,23 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./index.scss";
 import bgWindow from "../../../assets/images/Group 1086877.jpg";
 import GreenRight from "../../../assets/images/Frame 1000005944-3.svg";
 import CrossBrown1 from "../../../assets/images/Frame 1000005944-2.svg";
 import CrossBrown2 from "../../../assets/images/Frame 1000005944-1.svg";
 import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
-import { moduleCards } from "../../../data";
-import { useLocation } from "react-router-dom";
 const ChooseAPI = (props) => {
+  const {selectedModuleData}= props
   const [zoomId, setZoomId] = useState(null);
-  const [selectedModuleData, setSelectedModuleData] = useState({});
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const quesryParam = queryParams.get("id");
-
-  useEffect(() => {
-    setSelectedModuleData(moduleCards.find((item) => quesryParam == item.id));
-  }, []);
-
   const PositionChange = (id) => {
     if (zoomId == id) {
       setZoomId(null);
@@ -27,7 +16,7 @@ const ChooseAPI = (props) => {
   };
 
   return (
-    <div className="chooseAPI">
+    <div className="chooseAPI" key={props.index}>
       <div className="row">
         <div className="col-md-5">
           <div className="left_side_txt d-flex align-items-center">
@@ -50,8 +39,9 @@ const ChooseAPI = (props) => {
               />
 
               <div id="apiboxes" className="API_boxes">
-                {selectedModuleData?.step1ModalData?.cards?.map((item) => (
+                {selectedModuleData?.step1ModalData?.cards?.map((item,index) => (
                   <div
+                    key={index}
                     onClick={() => PositionChange(item.id)}
                     className={`api_card_box mouse-pointer ${
                       zoomId == item.id ? "ScaleCard" : "ScaleCard-Close"

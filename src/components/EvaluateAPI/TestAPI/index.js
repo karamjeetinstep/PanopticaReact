@@ -1,19 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./index.scss";
 import bgWindow from "../../../assets/images/Web Tiles - 2nd Step.jpg";
 import { moduleCards } from "../../../data";
 import { useLocation } from "react-router-dom"
 
 const TestAPI = (props) => {
   const [zoomId, setZoomId] = useState(null);
-  const [selectedModuleData, setSelectedModuleData] = useState({});
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const quesryParam = queryParams.get("id");
-
-  useEffect(()=>{
-    setSelectedModuleData(moduleCards.find((item)=> quesryParam==item.id))
-  },[])
+  const {selectedModuleData}= props
 
   const PositionChange = (id) => {
     if (zoomId === id) {
@@ -23,7 +15,7 @@ const TestAPI = (props) => {
     }
   };
   return (
-    <div className="chooseAPI testAPI">
+    <div className="chooseAPI testAPI" key={props.index}>
       <div className="row">
         <div className="col-md-5">
           <div className="left_side_txt d-flex align-items-center">
@@ -48,6 +40,7 @@ const TestAPI = (props) => {
               <div id="apiboxes" className="API_boxes">
               {selectedModuleData?.step2ModuleData?.cards?.map((item) => (
                   <div
+                  key={item.id}
                     onClick={() => PositionChange(item.id)}
                     className={`api_card_box mouse-pointer  ${
                       zoomId == item.id ? "ScaleCard" : "ScaleCard-Close"

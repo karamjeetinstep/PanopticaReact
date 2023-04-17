@@ -74,8 +74,9 @@ const InstantPOV = (props) => {
       </div>
       <div className="main row">
         <div className="col-md-4 d-flex flex-column">
-          {filter.map((filtItem) => (
+          {filter.map((filtItem,index) => (
             <Accordion
+            key={index}
               title={filtItem.name}
               content={<CheckBox defaultSelected={defaultSelected} onClick={onCheckBoxChange} listData={filtItem.checkbox} />}
             />
@@ -99,13 +100,13 @@ const InstantPOV = (props) => {
             </div>
           </div>
           {instantPovCards?.map(
-            (item) =>
+            (item,index) =>
             selectedFilter.includes(item.id) && (
-                <div className="API_Security">
+                <div className="API_Security" key={index}>
                   <h2>{item.name} &#40;<span>{item?.cards.length}</span>&#41;</h2>
                   <div className="row flex-wrap">
-                    {item?.cards?.map((cardDetail) => (
-                      <div className="col-md-33 mb-3 d-flex">
+                    {item?.cards?.map((cardDetail,index) => (
+                      <div className="col-md-33 mb-3 d-flex" key={index}>
                         <div className="api_sec_box">
                           <img
                             width={60}

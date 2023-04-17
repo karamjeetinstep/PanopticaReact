@@ -21,11 +21,20 @@ export const moduleCards = [
     id: 1,
     img: FinancialServices,
     name: "Financial Services",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Risk findings in APIs",
-      topDescription: "The findings that we obtain following an evaluation of <br />the APIs are the main emphasis on the right.",
+      topDescription:
+        "The findings that we obtain following an evaluation of <br />the APIs are the main emphasis on the right.",
       leftHeading: "Choose an API",
-      leftDescription: "Lets pick a banking sector example with highlighted ‘Mobile Banking API’ to evaluate.",
+      leftDescription:
+        "Lets pick a banking sector example with highlighted ‘Mobile Banking API’ to evaluate.",
       cards: [
         {
           id: 1,
@@ -67,9 +76,11 @@ export const moduleCards = [
     },
     step2ModuleData: {
       topHeading: "Risk findings in APIs",
-      topDescription: "The findings that we obtain following an evaluation of <br />the APIs are the main emphasis on the right.",
+      topDescription:
+        "The findings that we obtain following an evaluation of <br />the APIs are the main emphasis on the right.",
       leftHeading: "Choose an API",
-      leftDescription: "Lets pick a banking sector example with highlighted ‘Mobile Banking API’ to evaluate.",
+      leftDescription:
+        "Lets pick a banking sector example with highlighted ‘Mobile Banking API’ to evaluate.",
       cards: [
         {
           id: 1,
@@ -108,17 +119,69 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "We can perform 3 tests on the APIs",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Risk findings in APIs",
+      topDescription:
+        "The findings that we obtain following an evaluation of <br /> the APIs are the main emphasis on the right.",
+      leftHeading: "Choose an API",
+      leftDescription:
+        "Lets pick a banking sector example with highlighted ‘Mobile Banking API’ to evaluate.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
   {
     id: 2,
     img: CloudBorn,
     name: "Tech/Cloud-Born",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Tech/Cloud-Born",
       topDescription: "Tech/Cloud-Born",
@@ -206,17 +269,69 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "Tech/Cloud-Born",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
   {
     id: 3,
     img: Utilities,
     name: "Utilities",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Utilities",
       topDescription: "Utilities",
@@ -304,17 +419,69 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "Utilities",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
   {
     id: 4,
     img: Transport,
     name: "Transport",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Transport",
       topDescription: "Transport",
@@ -402,17 +569,69 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "Transport",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
   {
     id: 5,
     img: Retail,
     name: "Retail",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Retail",
       topDescription: "Retail",
@@ -500,17 +719,69 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "Retail",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
   {
     id: 6,
     img: Manufacturing,
     name: "Manufacturing",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Manufacturing",
       topDescription: "Manufacturing",
@@ -598,17 +869,69 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "Manufacturing",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
   {
     id: 7,
     img: PublicSector,
     name: "Public Sector High",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Public Sector High",
       topDescription: "Public Sector High",
@@ -696,17 +1019,69 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "Public Sector High",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
   {
     id: 8,
     img: Communication,
     name: "Communication",
+    steps: [
+      { title: "Choose an API", content: ChooseAPI },
+      { title: "Test API Vulnerability", content: TestAPI },
+      { title: "Upload API Specification", content: UploadAPI },
+      { title: "Evaluate Security Posture", content: EvaluateSecurity },
+      { title: "Finish", content: Finish },
+    ],
     step1ModalData: {
       topHeading: "Communication",
       topDescription: "Communication",
@@ -794,12 +1169,57 @@ export const moduleCards = [
         },
       ],
     },
-    step3Moduledata:{
+    step3ModuleData: {
+      modalAccordian: {
+        accordian: [
+          {
+            title: "API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "2API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+          {
+            title: "3API specification analysis through upload/reconstruction",
+            content: "conentnt",
+          },
+        ],
+        title: "Communication",
+      },
       topHeading: "Communication",
-      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
       leftHeading: "Upload API Specification",
-      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
-    }
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step4ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    },
+    step5ModuleData: {
+      topHeading: "Retail",
+      topDescription:
+        " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription:
+        "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+      firstTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+      secondTextPopUp: {
+        heading: "Cirtical privacy/exposure",
+        description:
+          "User is informed of how Panoptica can secure their API with this info.",
+      },
+    },
   },
 ];
 export const evaluateAPIList = [
@@ -841,13 +1261,6 @@ export const accordian = [
     content: " Accordion content",
     subTitle: "Slideshow",
   },
-];
-export const steps = [
-  { title: "Choose an API", content: ChooseAPI },
-  { title: "Test API Vulnerability", content: TestAPI },
-  { title: "Upload API Specification", content: UploadAPI },
-  { title: "Evaluate Security Posture", content: EvaluateSecurity },
-  { title: "Finish", content: Finish },
 ];
 
 export const filter = [
@@ -1191,42 +1604,3 @@ export const instantPovCards = [
     ],
   },
 ];
-export const modalData = [
-  {
-    id: 1,
-    heading: "Mobile Banking API",
-    port: "21016",
-    cluster: "finance-cluster",
-    nameSpace: "finance cluster",
-    gateway: "Kong",
-    thread1: 2,
-    thread2: 1,
-    thread3: 5,
-    thread4: 6,
-  },
-  {
-    id: 2,
-    heading: "Conversion",
-    port: "21017",
-    cluster: "finance-cluster",
-    nameSpace: "finance cluster",
-    gateway: "Tyk",
-    thread1: 2,
-    thread2: 1,
-    thread3: 3,
-    thread4: 6,
-  },
-  {
-    id: 3,
-    heading: "Mutual Funds",
-    port: "52212",
-    cluster: "finance-cluster",
-    nameSpace: "finance cluster",
-    gateway: "Apigee X",
-    thread1: 2,
-    thread2: 1,
-    thread3: 7,
-    thread4: 9,
-  },
-];
-

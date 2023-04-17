@@ -16,7 +16,7 @@ function Accordion(props) {
   }
 
   return (
-    <div className={`accordion__section ${props.className}`}>
+    <div key={props.key} className={`accordion__section ${props.className}`}>
       <div
         className={`accordion ${active ? "active" : ""}`}
         onClick={toggleAccordion}

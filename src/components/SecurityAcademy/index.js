@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { moduleCards, evaluateAPIList, accordian } from "../../data";
 import Button from "../../common/Button";
 import { BsArrowLeft } from "react-icons/bs";
@@ -6,7 +6,7 @@ import EvaluteImg from "../../assets/images/Frame 1000005980.svg";
 import Accordion from "./Accordion";
 import { useDispatch , useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {setSlectedmodule} from '../../redux/reducer/modal';
+import {setSlectedmodule,setCurrentStep} from '../../redux/reducer/modal';
 
 const SecurityAcademy = (props) => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const SecurityAcademy = (props) => {
                   <h3>What you will get after this module?</h3>
                   <ul>
                     {evaluateAPIList.map((item) => (
-                      <li>{item}</li>
+                      <li key={item}>{item}</li>
                     ))}
                   </ul>
                 </div>
@@ -68,7 +68,7 @@ const SecurityAcademy = (props) => {
             <div className="flex-boxing">
               {moduleCards.map((item) => (
                 <button
-                  onClick={() => {
+                  onClick={() => {                   
                    dispatch(setSlectedmodule(item.id))
                   }}
                   className={`industry_box ${
@@ -95,6 +95,7 @@ const SecurityAcademy = (props) => {
             <Button
               disabled={!selectedModuleId}
               onClick={() => {
+                dispatch(setCurrentStep(1));
                 navigate(`/evaluate-api?id=${selectedModuleId}`);
               }}
               text="Start Module"
