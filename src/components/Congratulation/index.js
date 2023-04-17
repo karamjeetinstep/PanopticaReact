@@ -1,11 +1,12 @@
-import React from "react";
+import React , {useState} from "react";
 import SubHeader from "../../common/SubHeader";
 import Button from "../../common/Button";
 import { useNavigate } from "react-router-dom";
 import iconImage from "../../assets/images/Frame 1000006035.svg";
-import { congatulationCard } from "../../data/";
+import {instantPovCards } from "../../data/";
 
 const Congratulation = (props) => {
+  const [congatulationCard, setCongatulationCard] = useState(instantPovCards[0]);
   const navigate = useNavigate();
   return (
     <>
@@ -69,7 +70,7 @@ const Congratulation = (props) => {
           <div className="cards">
             <div className="API_Security">
               <div className="row flex-wrap">
-                {congatulationCard.map((card) => (
+                {congatulationCard?.cards.map((card) => (
                   <div className="col-md-33 mb-3 d-flex">
                     <div className="api_sec_box">
                       <img

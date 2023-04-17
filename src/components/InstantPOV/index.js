@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import backArrow from "../../assets/images/backArrow.png";
 import securityIcon from "../../assets/images/securityIcon.png";
 import { useNavigate } from "react-router-dom";
@@ -12,6 +12,7 @@ const InstantPOV = (props) => {
   const navigate = useNavigate();
   const defaultSelected=[1,2];
   const [selectedFilter, setSelectedFilter] = useState(defaultSelected);
+  const [searchTerm, setSearchTerm] = useState('');
   const onCheckBoxChange=(isChecked,id)=>{
      if(isChecked){
       console.log(selectedFilter,id)
@@ -21,6 +22,30 @@ const InstantPOV = (props) => {
       setSelectedFilter(filterData);
      }
   }
+
+  useEffect(() => {
+    const debounceSearch = setTimeout(onSearch, 500);
+    return () => {
+      clearTimeout(debounceSearch);
+    };
+  }, [searchTerm]);
+
+  const handleChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const onSearch=()=>{
+    const filteredId=[]
+    instantPovCards.forEach((item)=>{
+      item.cards.forEach((card)=>{
+        const regex = new RegExp(searchTerm, "g");
+        const match = card.heading.match(regex);
+        match &&filteredId.push(item.id)
+      })         
+    });
+    setSelectedFilter(filteredId)
+};
+
   return (
     <div className="instantPOV">
       <div className="heading">
@@ -65,6 +90,7 @@ const InstantPOV = (props) => {
                 placeholder="Search..."
                 type="text"
                 name="text"
+                onChange={handleChange}
                 // value=""
               />
               <button type="submit" className="search_icon">

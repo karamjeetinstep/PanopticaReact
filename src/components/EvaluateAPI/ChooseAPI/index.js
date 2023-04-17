@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 import bgWindow from "../../../assets/images/Group 1086877.jpg";
 import GreenRight from "../../../assets/images/Frame 1000005944-3.svg";
 import CrossBrown1 from "../../../assets/images/Frame 1000005944-2.svg";
 import CrossBrown2 from "../../../assets/images/Frame 1000005944-1.svg";
 import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
-import { modalData } from "../../../data";
+import { moduleCards } from "../../../data";
+import { useLocation } from "react-router-dom";
 const ChooseAPI = (props) => {
   const [zoomId, setZoomId] = useState(null);
+  const [selectedModuleData, setSelectedModuleData] = useState({});
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const quesryParam = queryParams.get("id");
+
+  useEffect(() => {
+    setSelectedModuleData(moduleCards.find((item) => quesryParam == item.id));
+  }, []);
 
   const PositionChange = (id) => {
     if (zoomId == id) {
@@ -23,21 +32,15 @@ const ChooseAPI = (props) => {
         <div className="col-md-5">
           <div className="left_side_txt d-flex align-items-center">
             <div>
-              <h1>Risk findings in APIs</h1>
-              <p>
-                The findings that we obtain following an evaluation of <br />
-                the APIs are the main emphasis on the right.
-              </p>
+              <h1>{selectedModuleData?.step1ModalData?.topHeading}</h1>
+              <p> {selectedModuleData?.step1ModalData?.topDescription}</p>
             </div>
           </div>
         </div>
         <div className="col-md-7">
           <div className="right_side_txt_box">
-            <h1>Choose an API</h1>
-            <p>
-              Lets pick a banking sector example with highlighted ‘Mobile
-              Banking API’ to evaluate.
-            </p>
+            <h1>{selectedModuleData?.step1ModalData?.leftHeading}</h1>
+            <p> {selectedModuleData?.step1ModalData?.leftDescription}</p>
             <div className={`WindowBox `}>
               <img
                 width="100%"
@@ -47,7 +50,7 @@ const ChooseAPI = (props) => {
               />
 
               <div id="apiboxes" className="API_boxes">
-                {modalData.map((item) => (
+                {selectedModuleData?.step1ModalData?.cards?.map((item) => (
                   <div
                     onClick={() => PositionChange(item.id)}
                     className={`api_card_box mouse-pointer ${

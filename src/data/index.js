@@ -16,44 +16,790 @@ import securityIcon from "../assets/images/securityIcon.png";
 import CrossBrown3 from "../assets/images/Frame 1000005944.svg";
 import CrossBrown2 from "../assets/images/Frame 1000005944-1.svg";
 
-
-
 export const moduleCards = [
-  { id: 1, img: FinancialServices, name: "Financial Services" },
+  {
+    id: 1,
+    img: FinancialServices,
+    name: "Financial Services",
+    step1ModalData: {
+      topHeading: "Risk findings in APIs",
+      topDescription: "The findings that we obtain following an evaluation of <br />the APIs are the main emphasis on the right.",
+      leftHeading: "Choose an API",
+      leftDescription: "Lets pick a banking sector example with highlighted ‘Mobile Banking API’ to evaluate.",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Risk findings in APIs",
+      topDescription: "The findings that we obtain following an evaluation of <br />the APIs are the main emphasis on the right.",
+      leftHeading: "Choose an API",
+      leftDescription: "Lets pick a banking sector example with highlighted ‘Mobile Banking API’ to evaluate.",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "We can perform 3 tests on the APIs",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
+  },
   {
     id: 2,
     img: CloudBorn,
     name: "Tech/Cloud-Born",
+    step1ModalData: {
+      topHeading: "Tech/Cloud-Born",
+      topDescription: "Tech/Cloud-Born",
+      leftHeading: "Tech/Cloud-Born",
+      leftDescription: "Tech/Cloud-Born",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Tech/Cloud-Born",
+      topDescription: "Tech/Cloud-Born",
+      leftHeading: "Tech/Cloud-Born",
+      leftDescription: "Tech/Cloud-Born",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "Tech/Cloud-Born",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
   },
   {
     id: 3,
     img: Utilities,
     name: "Utilities",
+    step1ModalData: {
+      topHeading: "Utilities",
+      topDescription: "Utilities",
+      leftHeading: "Utilities",
+      leftDescription: "Utilities",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Utilities",
+      topDescription: "Utilities",
+      leftHeading: "Utilities",
+      leftDescription: "Utilities",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "Utilities",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
   },
   {
     id: 4,
     img: Transport,
     name: "Transport",
+    step1ModalData: {
+      topHeading: "Transport",
+      topDescription: "Transport",
+      leftHeading: "Transport",
+      leftDescription: "Transport",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Transport",
+      topDescription: "Transport",
+      leftHeading: "Transport",
+      leftDescription: "Transport",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "Transport",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
   },
   {
     id: 5,
     img: Retail,
     name: "Retail",
+    step1ModalData: {
+      topHeading: "Retail",
+      topDescription: "Retail",
+      leftHeading: "Retail",
+      leftDescription: "Retail",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Retail",
+      topDescription: "Retail",
+      leftHeading: "Retail",
+      leftDescription: "Retail",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "Retail",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
   },
   {
     id: 6,
     img: Manufacturing,
     name: "Manufacturing",
+    step1ModalData: {
+      topHeading: "Manufacturing",
+      topDescription: "Manufacturing",
+      leftHeading: "Manufacturing",
+      leftDescription: "Manufacturing",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Manufacturing",
+      topDescription: "Manufacturing",
+      leftHeading: "Manufacturing",
+      leftDescription: "Manufacturing",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "Manufacturing",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
   },
   {
     id: 7,
     img: PublicSector,
     name: "Public Sector High",
+    step1ModalData: {
+      topHeading: "Public Sector High",
+      topDescription: "Public Sector High",
+      leftHeading: "Public Sector High",
+      leftDescription: "Public Sector High",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Public Sector High",
+      topDescription: "Public Sector High",
+      leftHeading: "Public Sector High",
+      leftDescription: "Public Sector High",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "Public Sector High",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
   },
   {
     id: 8,
     img: Communication,
     name: "Communication",
+    step1ModalData: {
+      topHeading: "Communication",
+      topDescription: "Communication",
+      leftHeading: "Communication",
+      leftDescription: "Communication",
+      cards: [
+        {
+          id: 1,
+          heading: "Mobile Banking API",
+          port: "21016",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Kong",
+          thread1: 2,
+          thread2: 1,
+          thread3: 5,
+          thread4: 6,
+        },
+        {
+          id: 2,
+          heading: "Conversion",
+          port: "21017",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Tyk",
+          thread1: 2,
+          thread2: 1,
+          thread3: 3,
+          thread4: 6,
+        },
+        {
+          id: 3,
+          heading: "Mutual Funds",
+          port: "52212",
+          cluster: "finance-cluster",
+          nameSpace: "finance cluster",
+          gateway: "Apigee X",
+          thread1: 2,
+          thread2: 1,
+          thread3: 7,
+          thread4: 9,
+        },
+      ],
+    },
+    step2ModuleData: {
+      topHeading: "Communication",
+      topDescription: "Communication",
+      leftHeading: "Communication",
+      leftDescription: "Communication",
+      cards: [
+        {
+          id: 1,
+          heading: "Expired certificate",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description: "SSL is vulnerable to a CVE.",
+          affectedElements: ["Mobilebanking-fin-1.com +2 more"],
+          category: "Network",
+          source: "Api fuzzer",
+          mitigation:
+            "Review the CVE and perform the recommended action(s) for fixing the issue.",
+        },
+        {
+          id: 2,
+          heading: "Missing Security Scheme",
+          status: { name: "Critical", icon: CrossBrown3 },
+          description:
+            "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
+          affectedElements: ["Finace-cluster1.com"],
+          category: "Api-specifications",
+          source: "Api fuzzer",
+          mitigation:
+            "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
+        },
+        {
+          id: 3,
+          heading: "Authentication Issue",
+          status: { name: "High", icon: CrossBrown2 },
+          description:
+            "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
+          affectedElements: ["MFinace-cluster2.com"],
+          category: "Api-specifications",
+          source: "Oas analyser",
+          mitigation:
+            "Make sure that the server performs all the needed authorization checks.",
+        },
+      ],
+    },
+    step3Moduledata:{
+      topHeading: "Communication",
+      topDescription: " When evaluating the security posture of an API, it is also important to review the API specification. This involves uploading or reconstructing the API specification to determine how the API behaves and what security measures are in place.",
+      leftHeading: "Upload API Specification",
+      leftDescription: "In this scenario, we will upload the API specification of finance-cluster, allowing us to test for discrepancies between the specification and the actual behaviour of the API in run-time.",
+    }
   },
 ];
 export const evaluateAPIList = [
@@ -483,64 +1229,4 @@ export const modalData = [
     thread4: 9,
   },
 ];
-export const testAPIModalData = [
-  {
-    id: 1,
-    heading: "Expired certificate",
-    status: { name: "Critical", icon: CrossBrown3 },
-    description: "SSL is vulnerable to a CVE.",
-    affectedElements: ["Mobilebanking-fin-1.com +2 more"],
-    category: "Network",
-    source: "Api fuzzer",
-    mitigation:
-      "Review the CVE and perform the recommended action(s) for fixing the issue.",
-  },
-  {
-    id: 2,
-    heading: "Missing Security Scheme",
-    status: { name: "Critical", icon: CrossBrown3 },
-    description:
-      "Spec analyzer detected that the spec does not define neither a global nor a operation specific security scheme. It is highly recommended that all API operations support a sec...",
-    affectedElements: ["Finace-cluster1.com"],
-    category: "Api-specifications",
-    source: "Api fuzzer",
-    mitigation:
-      "Make sure all API operations have a security scheme associated and as a good practice add a global security scheme.",
-  },
-  {
-    id: 3,
-    heading: "Authentication Issue",
-    status: { name: "High", icon: CrossBrown2 },
-    description:
-      "The fuzzer retrieved meaningful information without being authenticated against an endpoint that required authentication according to the specifications.",
-    affectedElements: ["MFinace-cluster2.com"],
-    category: "Api-specifications",
-    source: "Oas analyser",
-    mitigation:
-      "Make sure that the server performs all the needed authorization checks.",
-  },
-];
 
-export const congatulationCard = [
-  {
-    img: securityIcon,
-    heading: "Perform BFLA attack and analyse in Panoptica",
-    description:
-      " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
-    time: "3:23 min",
-  },
-  {
-    img: securityIcon,
-    heading: "Perform BFLA attack and analyse in Panoptica",
-    description:
-      " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
-    time: "3:23 min",
-  },
-  {
-    img: securityIcon,
-    heading: "Perform BFLA attack and analyse in Panoptica",
-    description:
-      " Monitoring APIs and related security risks across multi-cloud environments requires comprehensive visibility and continuous API discovery.",
-    time: "3:23 min",
-  },
-];
