@@ -8,7 +8,7 @@ function Accordion(props) {
 
   useEffect(() => {
     console.log("Height for ", props.title, ": ", height);
-  }, [height,props.title]);
+  }, [height, props.title]);
 
   function toggleAccordion() {
     setActive(!active);
@@ -16,7 +16,7 @@ function Accordion(props) {
   }
 
   return (
-    <div className="accordion__section">
+    <div className={`accordion__section ${props.className}`}>
       <div
         className={`accordion ${active ? "active" : ""}`}
         onClick={toggleAccordion}
@@ -41,8 +41,7 @@ function Accordion(props) {
         style={{ maxHeight: `${height}` }}
         className="accordion__content"
       >
-       <div className="accordion__text"> {props.content}</div>
-        
+        <div className="accordion__text"> {props.content}</div>
       </div>
     </div>
   );

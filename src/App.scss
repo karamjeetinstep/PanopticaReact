@@ -777,6 +777,157 @@
     }
   }
 }
+// finish
+
+.float_card_overlay {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 12px 18px;
+  gap: 12px;
+
+  position: absolute;
+  width: 423px;
+  height: 110.29px;
+  left: -435px;
+  top: 210px;
+
+  background: #feeed7;
+  /* Neutral/800 */
+
+  border: 1px dashed #5a5a65;
+  border-radius: 6px;
+}
+.lin-horizontal {
+  width: 8%;
+  height: 1px;
+  right: -12px;
+  bottom: 178px;
+  border-top: 1px dotted #000;
+  position: absolute;
+}
+.lin-horizontal::after {
+  content: "";
+  position: absolute;
+  right: -9px;
+  top: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100px;
+  background-color: #000;
+}
+.float_card_overlay::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  right: 20px;
+  bottom: 108px;
+  height: 66%;
+  border-left: 1px dotted #000;
+}
+.float_card_overlay-2 {
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 12px 18px;
+  gap: 12px;
+
+  position: absolute;
+  width: 423px;
+  height: 110.29px;
+  left: -435px;
+  top: 210px;
+
+  background: #feeed7;
+  /* Neutral/800 */
+
+  border: 1px dashed #5a5a65;
+  border-radius: 6px;
+  .lin-horizontal {
+    top: 15px;
+    right: -34px;
+  }
+}
+.finish .right_side_txt_box .API_boxes {
+  width: 100% !important;
+  left: 3%;
+  .main-box {
+    align-items: flex-start;
+  }
+  .text-area-box {
+    h3 {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      color: #16263f;
+      margin-bottom: 2px;
+    }
+    p {
+      font-family: "CiscoSans";
+      font-style: normal;
+      font-weight: 350;
+      font-size: 18px;
+      line-height: 26px;
+      color: #16263f;
+      /* or 144% */
+      margin: 0;
+    }
+  }
+}
+.finish .finish-step {
+  .boxWithAcc {
+    width: 100%;
+    h1 {
+      margin-top: 10px !important;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 800 !important;
+      font-size: 14px !important;
+      line-height: 15px;
+      /* or 108% */
+      margin: 0;
+      letter-spacing: 0.0025em;
+
+      /* Neutral/900 */
+
+      color: #484851 !important;
+    }
+    .accordion__section {
+      padding-top: 10px;
+    }
+    .accordion {
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      img {
+        width: 20px;
+      }
+      p {
+        margin: 0;
+      }
+      .d-flex-center-flex-start {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+    }
+  }
+  .frst-chd {
+    width: 100%;
+    justify-content: space-between;
+  }
+  h1 {
+    font-family: "CiscoSans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11.6668px !important;
+    line-height: 14px !important;
+    display: flex;
+    align-items: center;
+    color: #33343a !important;
+  }
+}
+
+// finish step end
 
 //congratulation css ended
 // checkbox
@@ -848,6 +999,19 @@
   }
 }
 // stepper css ended
+
+// evaluateSecurity
+.evaluateSecurity {
+  padding: 6%;
+  padding-top: 127px !important;
+  .main-image {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+// evaluateSecurity end
+
 // chooseAPI started
 
 .chooseAPI {
@@ -1161,6 +1325,39 @@
 }
 
 // Text Api Ended
+
+.box-acc {
+  h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15.1481px;
+    line-height: 27px;
+    /* identical to box height, or 178% */
+
+    letter-spacing: 0.0025em;
+
+    /* Grey/100 */
+
+    color: #292a31;
+  }
+}
+.box-acc .accordion .accordion__title {
+  font-family: "CiscoSans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.0416px;
+  line-height: 24px;
+  /* or 141% */
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+
+  /* Grey/90 */
+
+  color: #3a3a44;
+}
+
 //footer css started
 .footer {
   display: flex;
@@ -1398,7 +1595,19 @@
 
   color: #5a5b6a;
 }
-
+.justify-start {
+  justify-content: flex-start !important;
+}
+.align-items-start {
+  align-items: flex-start !important;
+}
+.w-100 {
+  width: 100%;
+}
+.m-auto {
+  margin: auto;
+  display: block;
+}
 // media
 
 @media (max-width: 1147px) {
