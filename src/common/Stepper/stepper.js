@@ -3,7 +3,7 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import { useDispatch,useSelector } from "react-redux";
 import {setCurrentStep} from '../../redux/reducer/modal'
-function Stepper({ steps }) {
+function Stepper({selectedModuleData}) {
   const dispatch =useDispatch();
   const currentStep=useSelector((state)=>state.modalsData.currentStep);
 
@@ -33,7 +33,7 @@ function Stepper({ steps }) {
           onChange={(value) => value<6&&handleStepClick(value)}
         />
         <div className="slider-steps">
-        {steps.map((step, index) => (
+        {selectedModuleData?.steps?.map((step, index) => (
           <div key={step.title} className='points'>
           <div
             key={index}
@@ -47,8 +47,8 @@ function Stepper({ steps }) {
         ))}
         </div>
       </div>
-      {steps.map(({ content: Content }, index) => (
-         index+1===currentStep&&<Content></Content>
+      {selectedModuleData?.steps?.map(({ content: Content }, index) => (
+         index+1===currentStep&&<Content index={index} selectedModuleData={selectedModuleData}></Content>
         ))}
     </div>
   );

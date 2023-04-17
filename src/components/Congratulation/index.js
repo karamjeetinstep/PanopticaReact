@@ -1,11 +1,14 @@
-import React , {useState} from "react";
+import React , {useState,} from "react";
 import SubHeader from "../../common/SubHeader";
 import Button from "../../common/Button";
 import { useNavigate } from "react-router-dom";
 import iconImage from "../../assets/images/Frame 1000006035.svg";
 import {instantPovCards } from "../../data/";
+import {setCurrentStep} from '../../redux/reducer/modal';
+import { useDispatch  } from "react-redux";
 
 const Congratulation = (props) => {
+  const dispatch=useDispatch()
   const [congatulationCard, setCongatulationCard] = useState(instantPovCards[0]);
   const navigate = useNavigate();
   return (
@@ -18,7 +21,8 @@ const Congratulation = (props) => {
             <span>You have successfully completed this module</span>
             <Button
               onClick={() => {
-                navigate("/evaluate-api");
+                dispatch(setCurrentStep(1));
+                navigate("/evaluate-api/?id=1");
               }}
               background="white"
               border="2px solid #007aa3"
@@ -43,7 +47,8 @@ const Congratulation = (props) => {
                 </p>
                 <Button
                   onClick={() => {
-                    navigate("/evaluate-api");
+                    dispatch(setCurrentStep(1));
+                    navigate("/evaluate-api/?id=1");
                   }}
                   text="Start Module"
                 />
@@ -70,8 +75,8 @@ const Congratulation = (props) => {
           <div className="cards">
             <div className="API_Security">
               <div className="row flex-wrap">
-                {congatulationCard?.cards.map((card) => (
-                  <div className="col-md-33 mb-3 d-flex">
+                {congatulationCard?.cards.map((card,index) => (
+                  <div key={index} className="col-md-33 mb-3 d-flex">
                     <div className="api_sec_box">
                       <img
                         width={60}
