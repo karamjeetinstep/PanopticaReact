@@ -6,6 +6,7 @@ import CrossBrown1 from "../../../assets/images/Frame 1000005944-2.svg";
 import CrossBrown2 from "../../../assets/images/Frame 1000005944-1.svg";
 import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
 import { modalData } from "../../../data";
+import Accordion from "../../SecurityAcademy/Accordion";
 
 const UploadAPI = (props) => {
   const [zoomId, setZoomId] = useState(null);
@@ -41,7 +42,7 @@ const UploadAPI = (props) => {
               finance-cluster, allowing us to test for discrepancies between the
               specification and the actual behaviour of the API in run-time.
             </p>
-            <div className={`WindowBox `}>
+            <div className={`WindowBox align-items-start `}>
               <img
                 width="100%"
                 className={zoomId ? "blur-on" : "blur-off"}
@@ -49,9 +50,15 @@ const UploadAPI = (props) => {
                 alt=""
               />
 
-              <div id="apiboxes" className="API_boxes">
-                <div className="api_card_box mouse-pointer ">
-                  <img width={12} src={bgWindow} alt="" />
+              <div id="apiboxes" className="API_boxes ">
+                <div className="api_card_box box-acc mouse-pointer ">
+                  <h1>Evaluate API Security</h1>
+
+                  <Accordion
+                    className="w-100"
+                    content="rftgyhujikopedfghjkl"
+                    title="API specification analysis through upload/reconstruction"
+                  />
                 </div>
               </div>
             </div>

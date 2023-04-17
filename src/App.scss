@@ -1161,6 +1161,38 @@
 }
 
 // Text Api Ended
+.box-acc {
+  h1 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15.1481px;
+    line-height: 27px;
+    /* identical to box height, or 178% */
+
+    letter-spacing: 0.0025em;
+
+    /* Grey/100 */
+
+    color: #292a31;
+  }
+}
+.box-acc .accordion .accordion__title {
+  font-family: "CiscoSans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.0416px;
+  line-height: 24px;
+  /* or 141% */
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+
+  /* Grey/90 */
+
+  color: #3a3a44;
+}
+
 //footer css started
 .footer {
   display: flex;
@@ -1398,7 +1430,15 @@
 
   color: #5a5b6a;
 }
-
+.justify-start {
+  justify-content: flex-start !important;
+}
+.align-items-start {
+  align-items: flex-start !important;
+}
+.w-100 {
+  width: 100%;
+}
 // media
 
 @media (max-width: 1147px) {
