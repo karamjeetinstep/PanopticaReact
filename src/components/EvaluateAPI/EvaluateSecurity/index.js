@@ -1,5 +1,4 @@
 import React from "react";
-
 import mainImg from "../../../assets/images/Group 1086878.png";
 
 const EvaluateSecurity = (props) => {
