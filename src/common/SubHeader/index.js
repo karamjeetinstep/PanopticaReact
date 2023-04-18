@@ -16,7 +16,7 @@ const SubHeader = ({showFileIcon}) => {
             <img alt="" className="headerLogo" src={subHeaderLogo} />
             <span>Evaluate security posture of an API</span>
           </div>
-          <div className="subHederSecond">
+          {/* <div className="subHederSecond">
           <Button
               onClick={() => {
                 navigate("/");
@@ -34,7 +34,7 @@ const SubHeader = ({showFileIcon}) => {
               text="Sign Up"
             />
             {showFileIcon&&<button onClick={()=>{dispatch(handleSideModal(!isSidePopUpOpen))}} className="helpButton"><img alt="" src={fileIcon}></img></button>}
-          </div>
+          </div> */}
         </div>
   
   );
