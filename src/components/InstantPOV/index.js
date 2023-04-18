@@ -38,7 +38,7 @@ const InstantPOV = (props) => {
     const filteredId=[]
     instantPovCards.forEach((item)=>{
       item.cards.forEach((card)=>{
-        const regex = new RegExp(searchTerm, "g");
+        const regex = new RegExp(searchTerm, "gi");
         const match = card.heading.match(regex);
         match &&filteredId.push(item.id)
       })         
