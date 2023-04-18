@@ -1,7 +1,5 @@
-import React ,{useState,useEffect} from "react";
+import React from "react";
 import bgWindow from "../../../assets/images/Frame 1000005690.png";
-import { moduleCards } from "../../../data";
-import { useLocation } from "react-router-dom";
 import Accordion from "../../SecurityAcademy/Accordion";
 
 const UploadAPI = (props) => {

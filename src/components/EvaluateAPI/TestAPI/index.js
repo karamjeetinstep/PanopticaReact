@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import bgWindow from "../../../assets/images/Web Tiles - 2nd Step.jpg";
-import { moduleCards } from "../../../data";
-import { useLocation } from "react-router-dom"
 
 const TestAPI = (props) => {
   const [zoomId, setZoomId] = useState(null);

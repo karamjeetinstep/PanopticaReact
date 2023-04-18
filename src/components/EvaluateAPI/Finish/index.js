@@ -1,13 +1,10 @@
-import React ,{useEffect, useState} from "react";
-
+import React from "react";
 import imageCross from "../../../assets/images/image 2951.png";
 import CrossBrown3 from "../../../assets/images/Frame 1000005944.svg";
 import rightImages from "../../../assets/images/rightImage.jpg";
 import SecoImages from "../../../assets/images/SecoImages.jpg";
 import mainImg from "../../../assets/images/Group 1086878.png";
 import Accordion from "../../SecurityAcademy/Accordion";
-import { moduleCards } from "../../../data";
-import { useLocation } from "react-router-dom";
 
 const Finish = (props) => {
   const {selectedModuleData}= props
