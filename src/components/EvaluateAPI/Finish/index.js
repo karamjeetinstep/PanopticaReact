@@ -7,7 +7,28 @@ import mainImg from "../../../assets/images/Group 1086878.png";
 import Accordion from "../../SecurityAcademy/Accordion";
 
 const Finish = (props) => {
-  const {selectedModuleData}= props
+  const Boxacc = () => {
+    return (
+      <>
+        <div className="d-flex justify-between acc-content w-75">
+          <h3>Source </h3>
+          <p>oas_trace_analyzer</p>
+        </div>
+        <div className="d-flex justify-between acc-content w-75">
+          <h3>Description </h3>
+          <p>
+            Your Basic Auth password is among a list of well known passwords
+          </p>
+        </div>
+        <div className="d-flex justify-between acc-content w-75">
+          <h3>Mitigation </h3>
+          <p>Use a stronger password, and switch to a more secure mechanism</p>
+        </div>
+      </>
+    );
+  };
+
+  const { selectedModuleData } = props;
   return (
     <div className="chooseAPI finish" key={props.index}>
       <div className="row">
@@ -41,8 +62,18 @@ const Finish = (props) => {
                         <img src={imageCross} width={24} alt="" />
                       </div>
                       <div className="text-area-box">
-                        <h3>{selectedModuleData?.step5ModuleData?.firstTextPopUp?.heading}</h3>
-                        <p>{selectedModuleData?.step5ModuleData?.firstTextPopUp?.description} </p>
+                        <h3>
+                          {
+                            selectedModuleData?.step5ModuleData?.firstTextPopUp
+                              ?.heading
+                          }
+                        </h3>
+                        <p>
+                          {
+                            selectedModuleData?.step5ModuleData?.firstTextPopUp
+                              ?.description
+                          }{" "}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -51,13 +82,44 @@ const Finish = (props) => {
                   <div className="boxWithAcc">
                     <h1>Risk findings</h1>
                     <Accordion
+                      className="acc-border-bootom-1"
                       image={CrossBrown3}
                       title="1 High risk findings"
                       content={
                         <Accordion
-                          className=""
+                          className="acc-border-bootom-1"
                           title="1 High risk findings"
-                          content="1 High risk findings"
+                          content={<Boxacc />}
+                        />
+                      }
+                    />
+                  </div>
+                  <div className="boxWithAcc">
+                    <h1>Risk findings</h1>
+                    <Accordion
+                      className="acc-border-bootom-1"
+                      image={CrossBrown3}
+                      title="1 High risk findings"
+                      content={
+                        <Accordion
+                          className="acc-border-bootom-1"
+                          title="1 High risk findings"
+                          content={<Boxacc />}
+                        />
+                      }
+                    />
+                  </div>
+                  <div className="boxWithAcc">
+                    <h1>Risk findings</h1>
+                    <Accordion
+                      className="acc-border-bootom-1"
+                      image={CrossBrown3}
+                      title="1 High risk findings"
+                      content={
+                        <Accordion
+                          className="acc-border-bootom-1"
+                          title="1 High risk findings"
+                          content={<Boxacc />}
                         />
                       }
                     />
@@ -70,8 +132,18 @@ const Finish = (props) => {
                         <img src={imageCross} width={24} alt="" />
                       </div>
                       <div className="text-area-box">
-                        <h3>{selectedModuleData?.step5ModuleData?.secondTextPopUp?.heading}</h3>
-                        <p>{selectedModuleData?.step5ModuleData?.secondTextPopUp?.description}</p>
+                        <h3>
+                          {
+                            selectedModuleData?.step5ModuleData?.secondTextPopUp
+                              ?.heading
+                          }
+                        </h3>
+                        <p>
+                          {
+                            selectedModuleData?.step5ModuleData?.secondTextPopUp
+                              ?.description
+                          }
+                        </p>
                       </div>
                     </div>
                   </div>

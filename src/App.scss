@@ -843,7 +843,8 @@
   border-radius: 6px;
   .lin-horizontal {
     top: 15px;
-    right: -34px;
+    right: -13px;
+    width: 3%;
   }
 }
 .finish .right_side_txt_box .API_boxes {
@@ -1321,8 +1322,10 @@
   box-sizing: border-box;
   gap: 15px;
   align-items: flex-start;
+  width: 100%;
 
   .left_area {
+    width: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 5px;
@@ -1367,6 +1370,14 @@
     border-bottom: 1px dashed #e1e1e3;
     display: flex;
     justify-content: space-between;
+    .active-one-text {
+      background: rgba(84, 148, 255, 0.1);
+      border: 1.5px solid #2979ff;
+      border-radius: 6px;
+      padding-bottom: 7px;
+      padding-left: 10px;
+      padding-right: 40px;
+    }
     .one-text {
       span {
         font-family: "Roboto";
@@ -1399,8 +1410,144 @@
       }
     }
   }
+  .avtive-on-text {
+    background: rgba(135, 199, 141, 0.2);
+    border: 1.5px solid #87c289;
+    border-radius: 6px;
+    padding: 5px 7px;
+    padding-top: 0;
+  }
+
   .one-text-bottom {
     margin-top: 13px;
+    .text-common_box-2 {
+      gap: 10px;
+      width: 100%;
+      left: 22%;
+      top: 113%;
+      padding: 10px;
+      background: #feeed7;
+      border: 1px dashed #5a5a65;
+      box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.05), 0px 1.6px 3.6px rgba(0, 0, 0, 0.07);
+      border-radius: 6px 6px;
+      display: flex;
+      transform: scale(50%);
+      &::before {
+        content: "";
+        position: absolute;
+        height: 388%;
+        right: 20px;
+        width: 1px;
+        border-right: 1px dashed #000;
+        bottom: 102%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 8%;
+        right: 20px;
+        /* top: 0; */
+        height: 1px;
+        border-top: 1px dashed #000;
+        bottom: 489%;
+      }
+      .circel_line_bar-2 {
+        width: 18px;
+        position: absolute;
+        right: 60px;
+        bottom: 480%;
+        height: 18px;
+        background-color: #000;
+        border-radius: 100%;
+      }
+      .class-txts {
+        p {
+          font-family: "CiscoSans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 35px;
+          background: linear-gradient(270deg, #16263f 34.66%, #283a54 98.81%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+        h4 {
+          font-family: "CiscoSans";
+          font-style: normal;
+          font-weight: 350;
+          font-size: 18px;
+          line-height: 26px;
+          background: linear-gradient(270deg, #16263f 34.66%, #283a54 98.81%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
+
+    .text-common_box {
+      gap: 10px;
+      width: 100%;
+      right: 85%;
+      top: 53%;
+      padding: 10px;
+      background: #feeed7;
+      border: 1px dashed #5a5a65;
+      box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.05), 0px 1.6px 3.6px rgba(0, 0, 0, 0.07);
+      border-radius: 6px 6px;
+      display: flex;
+      transform: scale(50%);
+      &::before {
+        content: "";
+        height: 1px;
+        width: 35%;
+        left: 587px;
+        top: 50%;
+        position: absolute;
+        border-top: 2px dashed rgb(19, 19, 19);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        left: 781px;
+        top: 40%;
+        border-radius: 100%;
+        background-color: #000;
+      }
+
+      .class-txts {
+        p {
+          font-family: "CiscoSans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 35px;
+          background: linear-gradient(270deg, #16263f 34.66%, #283a54 98.81%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+        h4 {
+          font-family: "CiscoSans";
+          font-style: normal;
+          font-weight: 350;
+          font-size: 18px;
+          line-height: 26px;
+          background: linear-gradient(270deg, #16263f 34.66%, #283a54 98.81%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
+
     span {
       font-family: "Roboto";
       font-style: normal;
@@ -1470,7 +1617,6 @@
 //footer css started
 .footer {
   display: flex;
-  position: fixed;
   padding: 1% 3%;
   bottom: 0;
   background: #0d274d;
@@ -1499,7 +1645,54 @@
 }
 //footer css ended
 // Gobals Css
+.justify-between {
+  justify-content: space-between;
+}
 
+.acc-content {
+  h3 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* or 126% */
+
+    letter-spacing: 0.0025em;
+
+    /* Grey/70 */
+
+    color: #5a5b6a;
+  }
+  p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    /* identical to box height, or 145% */
+
+    letter-spacing: 0.0025em;
+    width: 75%;
+    /* Neutral/900 */
+
+    color: #484851;
+  }
+}
+
+.acc-border-bootom-1 {
+  .accordion {
+    border-bottom: 1px solid #e7e7ed;
+    margin-bottom: 10px;
+  }
+}
+
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
 .ScaleCard {
   transform: scale(180%) !important;
   z-index: 10;

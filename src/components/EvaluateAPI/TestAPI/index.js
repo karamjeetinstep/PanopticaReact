@@ -3,7 +3,7 @@ import bgWindow from "../../../assets/images/Web Tiles - 2nd Step.jpg";
 
 const TestAPI = (props) => {
   const [zoomId, setZoomId] = useState(null);
-  const {selectedModuleData}= props
+  const { selectedModuleData } = props;
 
   const PositionChange = (id) => {
     if (zoomId === id) {
@@ -18,14 +18,14 @@ const TestAPI = (props) => {
         <div className="col-md-5">
           <div className="left_side_txt d-flex align-items-center">
             <div>
-            <h1>{selectedModuleData?.step2ModuleData?.topHeading}</h1>
+              <h1>{selectedModuleData?.step2ModuleData?.topHeading}</h1>
               <p>{selectedModuleData?.step2ModuleData?.topDescription}</p>
             </div>
           </div>
         </div>
         <div className="col-md-7">
           <div className="right_side_txt_box">
-          <h1>{selectedModuleData?.step2ModuleData?.leftHeading}</h1>
+            <h1>{selectedModuleData?.step2ModuleData?.leftHeading}</h1>
             <p>{selectedModuleData?.step2ModuleData?.leftDescription}</p>
             <div className={`WindowBox `}>
               <img
@@ -36,11 +36,11 @@ const TestAPI = (props) => {
               />
 
               <div id="apiboxes" className="API_boxes">
-              {selectedModuleData?.step2ModuleData?.cards?.map((item) => (
+                {selectedModuleData?.step2ModuleData?.cards?.map((item) => (
                   <div
-                  key={item.id}
+                    key={item.id}
                     onClick={() => PositionChange(item.id)}
-                    className={`api_card_box mouse-pointer  ${
+                    className={`api_card_box mouse-pointer position-relative  ${
                       zoomId == item.id ? "ScaleCard" : "ScaleCard-Close"
                     } ${zoomId && zoomId !== item.id && "blur-on"}`}
                   >
@@ -66,12 +66,47 @@ const TestAPI = (props) => {
                             <span>Category</span>
                             <p>{item.category}</p>
                           </div>
-                          <div className="one-text">
+                          <div
+                            className={`one-text ${
+                              zoomId && zoomId == item.id && "active-one-text"
+                            }`}
+                          >
                             <span>Source</span>
                             <p>{item.source}</p>
                           </div>
                         </div>
-                        <div className="one-text-bottom">
+                        <div
+                          className={`one-text-bottom ${
+                            zoomId && zoomId == item.id && "avtive-on-text"
+                          }`}
+                        >
+                          {zoomId && zoomId == item.id ? (
+                            <>
+                              <div className="position-absolute text-common_box ">
+                                <div>
+                                  <img width={24} src={bgWindow} alt="" />
+                                </div>{" "}
+                                <div className="class-txts">
+                                  <p>Mitigation</p>
+                                  <h4>Issue found & mitigation to be taken</h4>
+                                </div>
+                              </div>
+
+                              <div className="position-absolute text-common_box-2 ">
+                                <div className="circel_line_bar-2"></div>
+                                <div>
+                                  <img width={24} src={bgWindow} alt="" />
+                                </div>{" "}
+                                <div className="class-txts">
+                                  <p>Mitigation</p>
+                                  <h4>Issue found & mitigation to be taken</h4>
+                                </div>
+                              </div>
+                            </>
+                          ) : (
+                            ""
+                          )}
+
                           <span>Mitigation</span>
                           <p className="last">{item.mitigation}</p>
                         </div>
